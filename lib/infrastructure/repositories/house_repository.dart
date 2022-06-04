@@ -11,9 +11,17 @@ import 'package:injectable/injectable.dart';
 class HouseRepository extends Repository {
   HouseRepository({required super.client, required super.configs});
 
-  Future<List<HouseDto>> getAllHouses() async {
-    final Uri uri = buildUri(path: ApiEndpoints.getAllHouses);
-    final Response response = await client.get(uri);
+  Future<List<HouseDto>> getAllHouses({required int page}) async {
+    final Uri uri = buildUri(
+      path: ApiEndpoints.getAllHouses,
+      parameters: {
+        'page': '$page',
+        'pageSize': '${configs.perPage}',
+      },
+    );
+    final Response response = await client.get(
+      uri,
+    );
 
     if (response.statusCode == 200) {
       return compute(parseResponseToListOfHouseDtos, response.body);

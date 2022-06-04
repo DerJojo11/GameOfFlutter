@@ -9,8 +9,10 @@ class HouseService {
   HouseService({required this.houseRepository});
   final HouseRepository houseRepository;
 
-  Future<List<House>> getAllHouses() async {
-    final List<HouseDto> houseDtos = await houseRepository.getAllHouses();
+  Future<List<House>> getAllHouses({int page = 1}) async {
+    final List<HouseDto> houseDtos = await houseRepository.getAllHouses(
+      page: page,
+    );
     return houseDtos.toDomain<House>();
   }
 

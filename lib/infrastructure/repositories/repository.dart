@@ -10,8 +10,8 @@ abstract class Repository {
   final Client client;
   final Configs configs;
 
-  /// Builds the Uri out of [configs.baseUrl] and provied [path] & [headers]
-  Uri buildUri({required String path, Map<String, dynamic>? headers}) {
-    return Uri.https(configs.baseUrl, path, headers);
+  /// Builds the Uri out of [configs.baseUrl] and provied [path] & [parameters]
+  Uri buildUri({required String path, Map<String, dynamic>? parameters}) {
+    return Uri.https(configs.baseUrl, path, parameters);
   }
 }
