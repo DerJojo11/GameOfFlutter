@@ -4,5 +4,5 @@ import 'package:game_of_flutter/my_app.dart';
 
 void main() {
   configureDependencies();
-  runApp(const MyApp());
+  runApp(MyApp());
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:game_of_flutter/configs/paddings.dart';
 import 'package:game_of_flutter/extensions/widget_extension.dart';
 import 'package:game_of_flutter/infrastructure/domain/house.dart';
+import 'package:game_of_flutter/router/router_paths.dart';
+import 'package:go_router/go_router.dart';
 
 class HouseEntry extends StatelessWidget {
   const HouseEntry({required this.house});
@@ -11,7 +13,7 @@ class HouseEntry extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () {},
+      onTap: () => context.push(RouterPaths.houseDetails, extra: house),
       title: Text(
         house.name,
         style: Theme.of(context).textTheme.headline6,

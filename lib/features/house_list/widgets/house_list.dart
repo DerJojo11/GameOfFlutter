@@ -17,21 +17,26 @@ class HouseList extends StatelessWidget {
           onRefresh: () => _onRefresh(context),
           child: state.map(
             loading: (loading) => const Center(child: CircularProgressIndicator()),
-            loaded: (loaded) => ListView.builder(
-              itemCount: loaded.allItemsLoaded ? loaded.houses.length : loaded.houses.length + 1,
-              itemBuilder: (context, index) {
-                if (index < loaded.houses.length) {
-                  return HouseEntry(
-                    house: loaded.houses[index],
-                  );
-                }
-
-                return const ListLoadingIndicator();
-              },
-            ),
+            loaded: (loaded) => _buildList(loaded),
             failure: (failure) => Center(child: Text(failure.error)),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildList(HouseListLoaded loaded) {
+    return Scrollbar(
+      child: ListView.builder(
+        itemCount: loaded.allItemsLoaded ? loaded.houses.length : loaded.houses.length + 1,
+        itemBuilder: (context, index) {
+          if (index < loaded.houses.length) {
+            return HouseEntry(
+              house: loaded.houses[index],
+            );
+          }
+          return const ListLoadingIndicator();
+        },
       ),
     );
   }
