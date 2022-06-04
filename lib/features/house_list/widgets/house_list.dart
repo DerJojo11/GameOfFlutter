@@ -6,7 +6,7 @@ import 'package:game_of_flutter/features/house_list/widgets/list_loading_indicat
 import 'package:game_of_flutter/injectable/injection.dart';
 
 class HouseList extends StatelessWidget {
-  const HouseList({Key? key}) : super(key: key);
+  const HouseList();
 
   @override
   Widget build(BuildContext context) {

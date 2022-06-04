@@ -37,4 +37,5 @@ analyzer:
      sort_constructors_first: true
      always_put_required_named_parameters_first: true
      require_trailing_commas: true
+     use_super_parameters: true
      
