@@ -25,9 +25,7 @@ class HouseList extends StatelessWidget {
                     house: loaded.houses[index],
                   );
                 }
-                if (loaded.allItemsLoaded == false) {
-                  context.read<HouseListBloc>().add(const HouseListFetchNextPage());
-                }
+
                 return const ListLoadingIndicator();
               },
             ),
