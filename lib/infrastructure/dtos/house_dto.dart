@@ -37,7 +37,7 @@ class HouseDto with _$HouseDto, Dto<House> {
         name: name ?? '',
         titles: removeEmptyStringsFromList(titles),
         seats: removeEmptyStringsFromList(seats),
-        ancestralWeapons: ancestralWeapons,
+        ancestralWeapons: removeEmptyStringsFromList(ancestralWeapons),
         cadetBranches: cadetBranches?.map((e) => e.extractNumber).whereType<int>().toList() ?? [],
         swornMembers: swornMembers?.map((e) => e.extractNumber).whereType<int>().toList() ?? [],
         coatOfArms: coatOfArms ?? '',

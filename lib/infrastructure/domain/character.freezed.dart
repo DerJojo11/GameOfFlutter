@@ -22,9 +22,9 @@ mixin _$Character {
   String get culture => throw _privateConstructorUsedError;
   String get born => throw _privateConstructorUsedError;
   String get died => throw _privateConstructorUsedError;
-  String get father => throw _privateConstructorUsedError;
-  String get mother => throw _privateConstructorUsedError;
-  String get spouse => throw _privateConstructorUsedError;
+  int? get father => throw _privateConstructorUsedError;
+  int? get mother => throw _privateConstructorUsedError;
+  int? get spouse => throw _privateConstructorUsedError;
   List<String> get titles => throw _privateConstructorUsedError;
   List<String> get aliases => throw _privateConstructorUsedError;
   List<int> get allegiances => throw _privateConstructorUsedError;
@@ -49,9 +49,9 @@ abstract class $CharacterCopyWith<$Res> {
       String culture,
       String born,
       String died,
-      String father,
-      String mother,
-      String spouse,
+      int? father,
+      int? mother,
+      int? spouse,
       List<String> titles,
       List<String> aliases,
       List<int> allegiances,
@@ -116,15 +116,15 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
       father: father == freezed
           ? _value.father
           : father // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       mother: mother == freezed
           ? _value.mother
           : mother // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       spouse: spouse == freezed
           ? _value.spouse
           : spouse // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       titles: titles == freezed
           ? _value.titles
           : titles // ignore: cast_nullable_to_non_nullable
@@ -170,9 +170,9 @@ abstract class _$$_CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
       String culture,
       String born,
       String died,
-      String father,
-      String mother,
-      String spouse,
+      int? father,
+      int? mother,
+      int? spouse,
       List<String> titles,
       List<String> aliases,
       List<int> allegiances,
@@ -239,15 +239,15 @@ class __$$_CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
       father: father == freezed
           ? _value.father
           : father // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       mother: mother == freezed
           ? _value.mother
           : mother // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       spouse: spouse == freezed
           ? _value.spouse
           : spouse // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       titles: titles == freezed
           ? _value._titles
           : titles // ignore: cast_nullable_to_non_nullable
@@ -321,11 +321,11 @@ class _$_Character implements _Character {
   @override
   final String died;
   @override
-  final String father;
+  final int? father;
   @override
-  final String mother;
+  final int? mother;
   @override
-  final String spouse;
+  final int? spouse;
   final List<String> _titles;
   @override
   List<String> get titles {
@@ -438,9 +438,9 @@ abstract class _Character implements Character {
       required final String culture,
       required final String born,
       required final String died,
-      required final String father,
-      required final String mother,
-      required final String spouse,
+      required final int? father,
+      required final int? mother,
+      required final int? spouse,
       required final List<String> titles,
       required final List<String> aliases,
       required final List<int> allegiances,
@@ -462,11 +462,11 @@ abstract class _Character implements Character {
   @override
   String get died => throw _privateConstructorUsedError;
   @override
-  String get father => throw _privateConstructorUsedError;
+  int? get father => throw _privateConstructorUsedError;
   @override
-  String get mother => throw _privateConstructorUsedError;
+  int? get mother => throw _privateConstructorUsedError;
   @override
-  String get spouse => throw _privateConstructorUsedError;
+  int? get spouse => throw _privateConstructorUsedError;
   @override
   List<String> get titles => throw _privateConstructorUsedError;
   @override
