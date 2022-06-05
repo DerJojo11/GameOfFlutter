@@ -7,4 +7,11 @@ extension WidgetExtension on Widget {
       child: this,
     );
   }
+
+  SliverPadding withSliverPadding(EdgeInsets padding) {
+    return SliverPadding(
+      padding: padding,
+      sliver: this,
+    );
+  }
 }

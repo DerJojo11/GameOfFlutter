@@ -7,7 +7,7 @@ part 'house_dto.freezed.dart';
 part 'house_dto.g.dart';
 
 @freezed
-class HouseDto with _$HouseDto implements Dto<House> {
+class HouseDto with _$HouseDto, Dto<House> {
   factory HouseDto({
     String? url,
     String? name,
@@ -27,8 +27,7 @@ class HouseDto with _$HouseDto implements Dto<House> {
     List<String>? swornMembers,
   }) = _HouseDto;
 
-  factory HouseDto.fromJson(Map<String, dynamic> json) =>
-      _$HouseDtoFromJson(json);
+  factory HouseDto.fromJson(Map<String, dynamic> json) => _$HouseDtoFromJson(json);
 
   const HouseDto._();
 
@@ -36,21 +35,19 @@ class HouseDto with _$HouseDto implements Dto<House> {
   House get toDomain => House(
         id: url?.extractNumber ?? 0,
         name: name ?? '',
-        titles: titles,
-        seats: seats,
+        titles: removeEmptyStringsFromList(titles),
+        seats: removeEmptyStringsFromList(seats),
         ancestralWeapons: ancestralWeapons,
-        cadetBranches:
-            cadetBranches?.map((e) => e.extractNumber ?? 0).toList() ?? [],
-        swornMembers:
-            swornMembers?.map((e) => e.extractNumber ?? 0).toList() ?? [],
-        coatOfArms: coatOfArms,
+        cadetBranches: cadetBranches?.map((e) => e.extractNumber).whereType<int>().toList() ?? [],
+        swornMembers: swornMembers?.map((e) => e.extractNumber).whereType<int>().toList() ?? [],
+        coatOfArms: coatOfArms ?? '',
         currentLord: currentLord?.extractNumber,
-        diedOut: diedOut,
-        founded: founded,
+        diedOut: diedOut ?? '',
+        founded: founded ?? '',
         founder: founded?.extractNumber,
         heir: heir?.extractNumber,
         overlord: overlord?.extractNumber,
-        region: region,
-        words: words,
+        region: region ?? '',
+        words: words ?? '',
       );
 }

@@ -7,7 +7,7 @@ part 'character_dto.freezed.dart';
 part 'character_dto.g.dart';
 
 @freezed
-class CharacterDto with _$CharacterDto implements Dto<Character> {
+class CharacterDto with _$CharacterDto, Dto<Character> {
   factory CharacterDto({
     String? url,
     String? name,
@@ -42,12 +42,12 @@ class CharacterDto with _$CharacterDto implements Dto<Character> {
         father: father ?? '',
         mother: mother ?? '',
         spouse: spouse ?? '',
-        titles: titles ?? [],
-        aliases: aliases ?? [],
-        allegiances: allegiances?.map((e) => e.extractNumber ?? 0).toList() ?? [],
-        books: books?.map((e) => e.extractNumber ?? 0).toList() ?? [],
-        povBooks: povBooks?.map((e) => e.extractNumber ?? 0).toList() ?? [],
-        tvSeries: tvSeries ?? [],
-        playedBy: playedBy ?? [],
+        titles: removeEmptyStringsFromList(titles),
+        aliases: removeEmptyStringsFromList(aliases),
+        allegiances: allegiances?.map((e) => e.extractNumber).whereType<int>().toList() ?? [],
+        books: books?.map((e) => e.extractNumber).whereType<int>().toList() ?? [],
+        povBooks: povBooks?.map((e) => e.extractNumber).whereType<int>().toList() ?? [],
+        tvSeries: removeEmptyStringsFromList(tvSeries),
+        playedBy: removeEmptyStringsFromList(playedBy),
       );
 }

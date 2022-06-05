@@ -19,11 +19,11 @@ class HouseEntry extends StatelessWidget {
         style: Theme.of(context).textTheme.headline6,
       ),
       subtitle: Visibility(
-        visible: house.region?.isNotEmpty ?? false,
+        visible: house.region.isNotEmpty,
         child: Row(
           children: [
             const Icon(Icons.area_chart_rounded),
-            Text(house.region!).withPadding(
+            Text(house.region).withPadding(
               Paddings.leftSmall,
             ),
           ],
