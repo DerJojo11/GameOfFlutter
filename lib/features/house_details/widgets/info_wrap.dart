@@ -29,7 +29,7 @@ class InfoWrap extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: ColoredBox(
-                  color: Theme.of(context).primaryColor.withOpacity(.6),
+                  color: Theme.of(context).colorScheme.secondary.withOpacity(.6),
                   child: Text(
                     title,
                     maxLines: 1,

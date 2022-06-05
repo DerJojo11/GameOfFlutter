@@ -23,7 +23,10 @@ class HouseEntry extends StatelessWidget {
         child: Row(
           children: [
             const Icon(Icons.area_chart_rounded),
-            Text(house.region).withPadding(
+            Text(
+              house.region,
+              style: Theme.of(context).textTheme.subtitle1,
+            ).withPadding(
               Paddings.leftSmall,
             ),
           ],
