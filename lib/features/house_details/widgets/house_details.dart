@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:game_of_flutter/configs/paddings.dart';
 import 'package:game_of_flutter/extensions/widget_extension.dart';
+import 'package:game_of_flutter/features/house_details/widgets/body_info_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/character_info.dart';
 import 'package:game_of_flutter/features/house_details/widgets/flexible_house_details_space_bar.dart';
+import 'package:game_of_flutter/features/house_details/widgets/headline_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/info_wrap.dart';
 import 'package:game_of_flutter/infrastructure/domain/house.dart';
 
@@ -53,15 +55,15 @@ class HouseDetails extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _buildHeadline(context, 'Informations'),
-        _buildBodyText('Region: ', house.region, context),
-        _buildBodyText('Coat of arms: ', house.coatOfArms, context),
-        _buildBodyText('Words: ', house.words, context),
+        const HeadlineText(title: 'Informations'),
+        BodyInfoText(title: 'Region: ', content: house.region),
+        BodyInfoText(title: 'Coat of arms: ', content: house.coatOfArms),
+        BodyInfoText(title: 'Words: ', content: house.words),
         _buildWrap(context, items: house.titles ?? [], prefix: 'Titles: '),
         _buildWrap(context, items: house.seats ?? [], prefix: 'Seats: '),
-        _buildBodyText('Founded: ', house.founded, context),
+        BodyInfoText(title: 'Founded: ', content: house.founded),
         _buildWrap(context, items: house.ancestralWeapons ?? [], prefix: 'Ancestral Weapons: '),
-        _buildBodyText('Died out: ', house.diedOut, context),
+        BodyInfoText(title: 'Died out: ', content: house.diedOut),
       ],
     ).withPadding(
       Paddings.bottomSmall,
@@ -86,28 +88,5 @@ class HouseDetails extends StatelessWidget {
             characterId: id,
           )
         : const SizedBox.shrink();
-  }
-
-  Widget _buildHeadline(BuildContext context, String text) {
-    return Text(
-      text,
-      style: Theme.of(context).textTheme.headline5,
-    );
-  }
-
-  Widget _buildBodyText(String prefix, String text, BuildContext context) {
-    const String notDefined = 'Not defined';
-
-    return RichText(
-      text: TextSpan(
-        style: DefaultTextStyle.of(context).style,
-        children: [
-          TextSpan(text: prefix, style: const TextStyle(fontWeight: FontWeight.bold)),
-          TextSpan(text: text.isNotEmpty ? text : notDefined),
-        ],
-      ),
-    ).withPadding(
-      Paddings.topSmaller,
-    );
   }
 }

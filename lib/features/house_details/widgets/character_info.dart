@@ -4,6 +4,8 @@ import 'package:game_of_flutter/configs/assets.dart';
 import 'package:game_of_flutter/configs/paddings.dart';
 import 'package:game_of_flutter/extensions/widget_extension.dart';
 import 'package:game_of_flutter/features/house_details/blocs/bloc/character_bloc.dart';
+import 'package:game_of_flutter/features/house_details/widgets/body_info_text.dart';
+import 'package:game_of_flutter/features/house_details/widgets/headline_text.dart';
 import 'package:game_of_flutter/injectable/injection.dart';
 
 class CharacterInfo extends StatelessWidget {
@@ -24,7 +26,7 @@ class CharacterInfo extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Divider(),
-            _buildHeadline(context, title).withPadding(
+            HeadlineText(title: title).withPadding(
               Paddings.bottomSmall,
             ),
             SizedBox(
@@ -49,9 +51,9 @@ class CharacterInfo extends StatelessWidget {
                             loaded.character.name,
                             style: Theme.of(context).textTheme.headline6,
                           ),
-                          _buildBodyText('Culture: ', loaded.character.culture, context),
-                          _buildBodyText('Born: ', loaded.character.born, context),
-                          _buildBodyText('Died: ', loaded.character.died, context),
+                          BodyInfoText(title: 'Culture: ', content: loaded.character.culture),
+                          BodyInfoText(title: 'Born: ', content: loaded.character.born),
+                          BodyInfoText(title: 'Died: ', content: loaded.character.died),
                         ],
                       ),
                     ),
@@ -65,29 +67,6 @@ class CharacterInfo extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-
-  Widget _buildHeadline(BuildContext context, String text) {
-    return Text(
-      text,
-      style: Theme.of(context).textTheme.headline5,
-    );
-  }
-
-  Widget _buildBodyText(String prefix, String text, BuildContext context) {
-    const String notDefined = 'Not defined';
-
-    return RichText(
-      text: TextSpan(
-        style: DefaultTextStyle.of(context).style,
-        children: [
-          TextSpan(text: prefix, style: const TextStyle(fontWeight: FontWeight.bold)),
-          TextSpan(text: text.isNotEmpty ? text : notDefined),
-        ],
-      ),
-    ).withPadding(
-      Paddings.topSmaller,
     );
   }
 }
