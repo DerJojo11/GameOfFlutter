@@ -46,4 +46,9 @@ flutter:
   assets:
     - assets/
     - assets/house_details/
+  
+  fonts:
+    - family: GameOfThrones
+      fonts:
+        - asset: assets/fonts/game_of_thrones.ttf
  
