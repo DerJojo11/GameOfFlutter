@@ -54,7 +54,7 @@ class HouseListBloc extends Bloc<HouseListEvent, HouseListState> {
 
   Future<HouseListState> _fetchHouses({int page = 1}) async {
     try {
-      final List<House> houses = await houseService.getAllHouses(page: page);
+      final List<House> houses = await houseService.getAll(page: page);
       return HouseListLoaded(
         houses: houses,
         allItemsLoaded: houses.length < configs.perPage,

@@ -1,7 +1,15 @@
 import 'package:game_of_flutter/infrastructure/domain/domain.dart';
 
-abstract class Dto<T extends Domain> {
+mixin Dto<T extends Domain> {
   T get toDomain;
+
+  List<String> removeEmptyStringsFromList(List<String>? list) {
+    List<String> newList = List.from(list ?? []);
+    if (newList.isNotEmpty) {
+      newList.removeWhere((element) => element.isEmpty);
+    }
+    return newList;
+  }
 }
 
 extension DtoExtension on List<Dto> {
