@@ -12,12 +12,16 @@ class FlexibleHouseDetailsSpaceBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlexibleSpaceBar(
-      centerTitle: true,
+      collapseMode: CollapseMode.parallax,
       background: ShaderMask(
         shaderCallback: (bounds) => const LinearGradient(
-          colors: [Colors.black54, Colors.transparent],
+          colors: [
+            Colors.black54,
+            Colors.transparent,
+            Colors.black54,
+          ],
           begin: Alignment.bottomCenter,
-          end: Alignment.center,
+          end: Alignment.topCenter,
         ).createShader(
           bounds,
         ),

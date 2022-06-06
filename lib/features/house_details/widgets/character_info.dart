@@ -27,7 +27,10 @@ class CharacterInfo extends StatelessWidget {
           children: [
             const Divider(),
             HeadlineText(title: title).withPadding(
-              Paddings.bottomSmall,
+              const EdgeInsets.only(
+                top: Paddings.smallValue,
+                bottom: Paddings.smallValue,
+              ),
             ),
             SizedBox(
               height: 150,
