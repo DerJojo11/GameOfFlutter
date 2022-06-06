@@ -55,7 +55,9 @@ class HouseDetails extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const HeadlineText(title: 'Informations'),
+        const HeadlineText(title: 'Informations').withPadding(
+          Paddings.bottomSmall,
+        ),
         BodyInfoText(title: 'Region: ', content: house.region),
         BodyInfoText(title: 'Coat of arms: ', content: house.coatOfArms),
         BodyInfoText(title: 'Words: ', content: house.words),

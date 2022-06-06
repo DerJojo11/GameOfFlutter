@@ -48,7 +48,7 @@ class InfoWrap extends StatelessWidget {
         ),
       ],
     ).withPadding(
-      Paddings.topSmaller,
+      Paddings.topSmall,
     );
   }
 }

@@ -24,7 +24,7 @@ class BodyInfoText extends StatelessWidget {
         ],
       ),
     ).withPadding(
-      Paddings.topSmaller,
+      Paddings.topSmall,
     );
   }
 }

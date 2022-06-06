@@ -12,6 +12,7 @@ class FlexibleHouseDetailsSpaceBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlexibleSpaceBar(
+      centerTitle: true,
       background: ShaderMask(
         shaderCallback: (bounds) => const LinearGradient(
           colors: [Colors.black54, Colors.transparent],
@@ -27,7 +28,9 @@ class FlexibleHouseDetailsSpaceBar extends StatelessWidget {
         ),
       ),
       titlePadding: Paddings.medium,
-      title: Text(name),
+      title: Text(
+        name,
+      ),
     );
   }
 }
