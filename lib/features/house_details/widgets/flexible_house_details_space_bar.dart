@@ -12,11 +12,12 @@ class FlexibleHouseDetailsSpaceBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlexibleSpaceBar(
+      expandedTitleScale: 1.4,
       collapseMode: CollapseMode.parallax,
       background: ShaderMask(
         shaderCallback: (bounds) => const LinearGradient(
           colors: [
-            Colors.black54,
+            Colors.black87,
             Colors.transparent,
             Colors.black54,
           ],
@@ -31,9 +32,15 @@ class FlexibleHouseDetailsSpaceBar extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      titlePadding: Paddings.medium,
+      titlePadding: const EdgeInsets.only(
+        left: Paddings.mediumValue,
+        right: Paddings.mediumValue,
+        top: Paddings.largerValue,
+        bottom: Paddings.mediumValue,
+      ),
       title: Text(
         name,
+        textAlign: TextAlign.center,
       ),
     );
   }
