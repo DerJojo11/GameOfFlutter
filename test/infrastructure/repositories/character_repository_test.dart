@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:game_of_flutter/configs/api_endpoints.dart';
-import 'package:game_of_flutter/infrastructure/dtos/house_dto.dart';
-import 'package:game_of_flutter/infrastructure/repositories/house_repository.dart';
+import 'package:game_of_flutter/infrastructure/dtos/character_dto.dart';
+import 'package:game_of_flutter/infrastructure/repositories/character_repository.dart';
 import 'package:http/http.dart';
 import 'package:mockito/mockito.dart';
 
@@ -22,20 +22,20 @@ void main() {
   group('getAll', () {
     test('verify client is called with correct uri and parameters', () async {
       // arrange
-      final HouseRepository houseRepository = HouseRepository(
+      final CharacterRepository characterRepository = CharacterRepository(
         client: mockAppClient,
         configs: mockAppConfigs,
       );
       when(mockAppConfigs.baseUrl).thenReturn('anapioficeandfire.com');
       when(mockAppConfigs.perPage).thenReturn(15);
       when(mockAppClient.get(any, headers: anyNamed('headers'))).thenAnswer((_) async => Response(
-            resource('test_houses.json'),
+            resource('test_characters.json'),
             200,
           ));
 
       final Uri expectedUri = Uri.https(
         'anapioficeandfire.com',
-        ApiEndpoints.getAllHouses,
+        ApiEndpoints.getAllCharacters,
         {
           'page': '1',
           'pageSize': '15',
@@ -43,7 +43,7 @@ void main() {
       );
 
       // act
-      await houseRepository.getAll(page: 1);
+      await characterRepository.getAll(page: 1);
 
       // assert
       verify(mockAppClient.get(expectedUri));
@@ -53,24 +53,24 @@ void main() {
   group('getForId', () {
     test('verify client is called with correct uri and parameters', () async {
       // arrange
-      final HouseRepository houseRepository = HouseRepository(
+      final CharacterRepository characterRepository = CharacterRepository(
         client: mockAppClient,
         configs: mockAppConfigs,
       );
       when(mockAppConfigs.baseUrl).thenReturn('anapioficeandfire.com');
       when(mockAppConfigs.perPage).thenReturn(15);
       when(mockAppClient.get(any, headers: anyNamed('headers'))).thenAnswer((_) async => Response(
-            resource('test_house.json'),
+            resource('test_character.json'),
             200,
           ));
 
       final Uri expectedUri = Uri.https(
         'anapioficeandfire.com',
-        ApiEndpoints.getHouseForId(1),
+        ApiEndpoints.getCharacterForId(1),
       );
 
       // act
-      await houseRepository.getForId(1);
+      await characterRepository.getForId(1);
 
       // assert
       verify(mockAppClient.get(expectedUri));
@@ -80,9 +80,9 @@ void main() {
   group('parseJson', () {
     test('verify client is called with correct uri and parameters', () async {
       // arrange
-      final String json = resource('test_house.json');
+      final String json = resource('test_character.json');
 
-      final HouseRepository houseRepository = HouseRepository(
+      final CharacterRepository characterRepository = CharacterRepository(
         client: mockAppClient,
         configs: mockAppConfigs,
       );
@@ -93,10 +93,10 @@ void main() {
             200,
           ));
 
-      final HouseDto expectedDto = HouseDto.fromJson(jsonDecode(json));
+      final CharacterDto expectedDto = CharacterDto.fromJson(jsonDecode(json));
 
       // act
-      final HouseDto dto = await houseRepository.getForId(1);
+      final CharacterDto dto = await characterRepository.getForId(1);
 
       // assert
       expect(dto, expectedDto);
