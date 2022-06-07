@@ -35,7 +35,7 @@ class CharacterInfo extends StatelessWidget {
             SizedBox(
               height: 150,
               child: state.map(
-                loading: (loading) => const Center(
+                loading: (_) => const Center(
                   child: CircularProgressIndicator(),
                 ),
                 loaded: (loaded) => Row(
