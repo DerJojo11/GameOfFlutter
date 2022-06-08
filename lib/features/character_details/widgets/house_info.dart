@@ -29,12 +29,12 @@ class HouseInfo extends StatelessWidget {
             loaded: (loaded) => InkWell(
                 onTap: () => context.push(RouterPaths.houseDetails, extra: loaded.house),
                 child: DetailsInfo(
-                  asset: Assets.charactersPlaceholder,
+                  asset: Assets.coatOfArmsPlaceholder,
                   title: loaded.house.name,
                   children: [
-                    BodyInfoText(title: 'Region: ', content: loaded.house.region),
-                    BodyInfoText(title: 'Coat of Arms: ', content: loaded.house.coatOfArms),
-                    BodyInfoText(title: 'words: ', content: loaded.house.words),
+                    BodyInfoText(title: 'Region: ', content: loaded.house.region, maxLines: 1),
+                    BodyInfoText(title: 'Coat of Arms: ', content: loaded.house.coatOfArms, maxLines: 1),
+                    BodyInfoText(title: 'words: ', content: loaded.house.words, maxLines: 1),
                   ],
                 )),
             failure: (failure) => Center(

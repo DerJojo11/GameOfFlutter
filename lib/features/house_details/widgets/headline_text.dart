@@ -8,6 +8,7 @@ class HeadlineText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
+      maxLines: 3,
       title,
       style: Theme.of(context).textTheme.headline5,
     );

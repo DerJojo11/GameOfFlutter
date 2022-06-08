@@ -32,9 +32,9 @@ class CharacterInfo extends StatelessWidget {
                   asset: Assets.charactersPlaceholder,
                   title: loaded.character.name,
                   children: [
-                    BodyInfoText(title: 'Culture: ', content: loaded.character.culture),
-                    BodyInfoText(title: 'Born: ', content: loaded.character.born),
-                    BodyInfoText(title: 'Died: ', content: loaded.character.died),
+                    BodyInfoText(title: 'Culture: ', content: loaded.character.culture, maxLines: 1),
+                    BodyInfoText(title: 'Born: ', content: loaded.character.born, maxLines: 1),
+                    BodyInfoText(title: 'Died: ', content: loaded.character.died, maxLines: 1),
                   ],
                 )),
             failure: (failure) => Center(
