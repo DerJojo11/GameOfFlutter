@@ -11,15 +11,17 @@ import 'package:injectable/injectable.dart' as _i2;
 import '../configs/app_configs.dart' as _i8;
 import '../configs/configs.dart' as _i7;
 import '../configs/theme/app_theme.dart' as _i3;
-import '../features/house_details/blocs/bloc/character_bloc.dart' as _i14;
-import '../features/house_list/blocs/bloc/house_list_bloc.dart' as _i13;
+import '../features/character_details/blocs/house/house_bloc.dart' as _i13;
+import '../features/house_details/blocs/character_bloc/character_bloc.dart'
+    as _i15;
+import '../features/house_list/blocs/house_list/house_list_bloc.dart' as _i14;
 import '../infrastructure/clients/app_client.dart' as _i6;
 import '../infrastructure/clients/client.dart' as _i5;
 import '../infrastructure/repositories/character_repository.dart' as _i11;
 import '../infrastructure/repositories/house_repository.dart' as _i9;
 import '../infrastructure/services/character_service.dart' as _i12;
 import '../infrastructure/services/house_service.dart' as _i10;
-import 'register_modules.dart' as _i15; // ignore_for_file: unnecessary_lambdas
+import 'register_modules.dart' as _i16; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -39,12 +41,14 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       client: get<_i5.Client>(), configs: get<_i7.Configs>()));
   gh.lazySingleton<_i12.CharacterService>(() => _i12.CharacterService(
       characterRepository: get<_i11.CharacterRepository>()));
-  gh.factory<_i13.HouseListBloc>(
-      () => _i13.HouseListBloc(get<_i10.HouseService>(), get<_i7.Configs>()));
-  gh.factory<_i14.CharacterBloc>(() => _i14.CharacterBloc(
+  gh.factory<_i13.HouseBloc>(
+      () => _i13.HouseBloc(get<_i10.HouseService>(), get<_i7.Configs>()));
+  gh.factory<_i14.HouseListBloc>(
+      () => _i14.HouseListBloc(get<_i10.HouseService>(), get<_i7.Configs>()));
+  gh.factory<_i15.CharacterBloc>(() => _i15.CharacterBloc(
       characterService: get<_i12.CharacterService>(),
       configs: get<_i7.Configs>()));
   return get;
 }
 
-class _$RegisterModules extends _i15.RegisterModules {}
+class _$RegisterModules extends _i16.RegisterModules {}

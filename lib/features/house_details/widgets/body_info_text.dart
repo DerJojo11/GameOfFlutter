@@ -8,10 +8,12 @@ class BodyInfoText extends StatelessWidget {
   const BodyInfoText({
     required this.title,
     required this.content,
+    this.padding = Paddings.topSmall,
   });
 
   final String title;
   final String content;
+  final EdgeInsets padding;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class BodyInfoText extends StatelessWidget {
         ],
       ),
     ).withPadding(
-      Paddings.topSmall,
+      padding,
     );
   }
 }

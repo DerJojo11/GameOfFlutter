@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:game_of_flutter/configs/assets.dart';
 import 'package:game_of_flutter/configs/paddings.dart';
 
 class FlexibleHouseDetailsSpaceBar extends StatelessWidget {
   const FlexibleHouseDetailsSpaceBar({
     required this.name,
+    required this.asset,
   });
 
   final String name;
+  final String asset;
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +29,13 @@ class FlexibleHouseDetailsSpaceBar extends StatelessWidget {
         ),
         blendMode: BlendMode.srcATop,
         child: Image.asset(
-          Assets.houseDetailsHeader,
+          asset,
           fit: BoxFit.cover,
         ),
       ),
       titlePadding: const EdgeInsets.only(
-        left: Paddings.mediumValue,
-        right: Paddings.mediumValue,
+        left: Paddings.largeValue,
+        right: Paddings.largeValue,
         top: Paddings.largerValue,
         bottom: Paddings.mediumValue,
       ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:game_of_flutter/configs/assets.dart';
 import 'package:game_of_flutter/configs/paddings.dart';
 import 'package:game_of_flutter/extensions/widget_extension.dart';
 import 'package:game_of_flutter/features/house_details/widgets/body_info_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/character_info.dart';
-import 'package:game_of_flutter/features/house_details/widgets/character_slider.dart';
+import 'package:game_of_flutter/core/widgets/info_slider.dart';
 import 'package:game_of_flutter/features/house_details/widgets/flexible_house_details_space_bar.dart';
 import 'package:game_of_flutter/features/house_details/widgets/headline_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/info_wrap.dart';
@@ -27,37 +28,39 @@ class HouseDetails extends StatelessWidget {
             pinned: true,
             flexibleSpace: FlexibleHouseDetailsSpaceBar(
               name: house.name,
+              asset: Assets.houseDetailsHeader,
             ),
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               addAutomaticKeepAlives: true,
               childCount: house.swornMembers.isNotEmpty ? 2 : 1,
-              (context, index) => index == 0 ? _buildInformations(context) : _buildSliderSection(),
+              (context, index) => index == 0 ? _buildContent(context) : _buildSliderSection(),
             ),
           ).withSliverPadding(
-            Paddings.bottomMedium,
+            Paddings.verticalMedium,
           ),
         ],
       ),
     );
   }
 
-  Widget _buildInformations(BuildContext context) {
+  Widget _buildContent(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _buildHouseInfomations(context),
+        const Divider().withPadding(
+          Paddings.topMedium,
+        ),
         _buildCharacterInfo(house.currentLord, headline: 'Current Lord'),
         _buildCharacterInfo(house.heir, headline: 'Heir'),
         _buildCharacterInfo(house.overlord, headline: 'Overlord'),
         _buildCharacterInfo(house.founder, headline: 'Founder'),
       ],
-    ).withPadding(const EdgeInsets.only(
-      right: Paddings.mediumValue,
-      left: Paddings.mediumValue,
-      top: Paddings.mediumValue,
-    ));
+    ).withPadding(
+      Paddings.horizontalMedium,
+    );
   }
 
   Widget _buildSliderSection() {
@@ -73,7 +76,10 @@ class HouseDetails extends StatelessWidget {
             right: Paddings.mediumValue,
           ),
         ),
-        CharacterSlider(characterIds: house.swornMembers),
+        InfoSlider(
+          itemCount: house.swornMembers.length,
+          itemBuilder: (_, index, __) => CharacterInfo(characterId: house.swornMembers[index]),
+        ),
       ],
     ).withPadding(
       Paddings.topSmall,
@@ -96,8 +102,6 @@ class HouseDetails extends StatelessWidget {
         _buildWrap(context, items: house.ancestralWeapons, prefix: 'Ancestral Weapons: '),
         BodyInfoText(title: 'Died out: ', content: house.diedOut),
       ],
-    ).withPadding(
-      Paddings.bottomSmall,
     );
   }
 
@@ -117,15 +121,10 @@ class HouseDetails extends StatelessWidget {
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Divider(),
               HeadlineText(title: headline).withPadding(
-                const EdgeInsets.only(
-                  top: Paddings.smallValue,
-                  bottom: Paddings.smallValue,
-                ),
+                Paddings.verticalMedium,
               ),
               CharacterInfo(
-                title: headline,
                 characterId: id,
               ),
             ],

@@ -1,6 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:game_of_flutter/features/house_list/blocs/bloc/house_list_bloc.dart';
+import 'package:game_of_flutter/features/house_list/blocs/house_list/house_list_bloc.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../../../test_helper/mocks/services/services_mocks.mocks.dart';

@@ -6,9 +6,9 @@ import 'dart:async' as _i7;
 
 import 'package:flutter_bloc/flutter_bloc.dart' as _i8;
 import 'package:game_of_flutter/configs/configs.dart' as _i3;
-import 'package:game_of_flutter/features/house_details/blocs/bloc/character_bloc.dart'
+import 'package:game_of_flutter/features/house_details/blocs/character_bloc/character_bloc.dart'
     as _i6;
-import 'package:game_of_flutter/features/house_list/blocs/bloc/house_list_bloc.dart'
+import 'package:game_of_flutter/features/house_list/blocs/house_list/house_list_bloc.dart'
     as _i4;
 import 'package:game_of_flutter/infrastructure/services/character_service.dart'
     as _i5;
