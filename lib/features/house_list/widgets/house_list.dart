@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:game_of_flutter/features/house_list/blocs/bloc/house_list_bloc.dart';
+import 'package:game_of_flutter/features/house_list/blocs/house_list/house_list_bloc.dart';
 import 'package:game_of_flutter/features/house_list/widgets/house_entry.dart';
 import 'package:game_of_flutter/features/house_list/widgets/list_loading_indicator.dart';
 import 'package:game_of_flutter/injectable/injection.dart';

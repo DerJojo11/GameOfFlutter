@@ -2,24 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:game_of_flutter/configs/assets.dart';
 import 'package:game_of_flutter/core/widgets/details_info.dart';
-import 'package:game_of_flutter/features/house_details/blocs/character_bloc/character_bloc.dart';
+import 'package:game_of_flutter/features/character_details/blocs/house/house_bloc.dart';
 import 'package:game_of_flutter/features/house_details/widgets/body_info_text.dart';
 import 'package:game_of_flutter/injectable/injection.dart';
 import 'package:game_of_flutter/router/router_paths.dart';
 import 'package:go_router/go_router.dart';
 
-class CharacterInfo extends StatelessWidget {
-  const CharacterInfo({
-    required this.characterId,
+class HouseInfo extends StatelessWidget {
+  const HouseInfo({
+    required this.id,
   });
 
-  final int characterId;
+  final int id;
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<CharacterBloc>(
-      create: (context) => getIt<CharacterBloc>()..add(CharacterFetch(id: characterId)),
-      child: BlocBuilder<CharacterBloc, CharacterState>(
+    return BlocProvider<HouseBloc>(
+      create: (context) => getIt<HouseBloc>()..add(HouseFetch(id: id)),
+      child: BlocBuilder<HouseBloc, HouseState>(
         builder: (context, state) => SizedBox(
           height: 150,
           child: state.map(
@@ -27,14 +27,14 @@ class CharacterInfo extends StatelessWidget {
               child: CircularProgressIndicator(),
             ),
             loaded: (loaded) => InkWell(
-                onTap: () => context.push(RouterPaths.characterDetails, extra: loaded.character),
+                onTap: () => context.push(RouterPaths.houseDetails, extra: loaded.house),
                 child: DetailsInfo(
-                  asset: Assets.charactersPlaceholder,
-                  title: loaded.character.name,
+                  asset: Assets.coatOfArmsPlaceholder,
+                  title: loaded.house.name,
                   children: [
-                    BodyInfoText(title: 'Culture: ', content: loaded.character.culture, maxLines: 1),
-                    BodyInfoText(title: 'Born: ', content: loaded.character.born, maxLines: 1),
-                    BodyInfoText(title: 'Died: ', content: loaded.character.died, maxLines: 1),
+                    BodyInfoText(title: 'Region: ', content: loaded.house.region, maxLines: 1),
+                    BodyInfoText(title: 'Coat of Arms: ', content: loaded.house.coatOfArms, maxLines: 1),
+                    BodyInfoText(title: 'words: ', content: loaded.house.words, maxLines: 1),
                   ],
                 )),
             failure: (failure) => Center(

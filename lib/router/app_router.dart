@@ -1,4 +1,6 @@
+import 'package:game_of_flutter/features/character_details/widgets/character_details.dart';
 import 'package:game_of_flutter/features/house_details/widgets/house_details.dart';
+import 'package:game_of_flutter/infrastructure/domain/character.dart';
 import 'package:game_of_flutter/infrastructure/domain/house.dart';
 import 'package:game_of_flutter/my_app.dart';
 import 'package:game_of_flutter/router/router_paths.dart';
@@ -12,10 +14,17 @@ class AppRouter {
         builder: (context, state) => const MyHomePage(),
       ),
       GoRoute(
-          path: RouterPaths.houseDetails,
-          builder: (context, state) => HouseDetails(
-                house: state.extra as House,
-              )),
+        path: RouterPaths.houseDetails,
+        builder: (context, state) => HouseDetails(
+          house: state.extra as House,
+        ),
+      ),
+      GoRoute(
+        path: RouterPaths.characterDetails,
+        builder: (context, state) => CharacterDetails(
+          character: state.extra as Character,
+        ),
+      ),
     ],
   );
 }

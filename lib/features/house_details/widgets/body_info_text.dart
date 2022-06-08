@@ -8,14 +8,20 @@ class BodyInfoText extends StatelessWidget {
   const BodyInfoText({
     required this.title,
     required this.content,
+    this.padding = Paddings.topSmall,
+    this.maxLines = 2,
   });
 
   final String title;
   final String content;
+  final EdgeInsets padding;
+  final int maxLines;
 
   @override
   Widget build(BuildContext context) {
     return RichText(
+      maxLines: maxLines,
+      overflow: TextOverflow.ellipsis,
       text: TextSpan(
         style: DefaultTextStyle.of(context).style,
         children: [
@@ -24,7 +30,7 @@ class BodyInfoText extends StatelessWidget {
         ],
       ),
     ).withPadding(
-      Paddings.topSmall,
+      padding,
     );
   }
 }

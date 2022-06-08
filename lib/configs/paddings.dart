@@ -42,4 +42,18 @@ abstract class Paddings {
   static const EdgeInsets topMedium = EdgeInsets.only(top: mediumValue);
   static const EdgeInsets topLarge = EdgeInsets.only(top: largeValue);
   static const EdgeInsets topLarger = EdgeInsets.only(top: largerValue);
+
+  // horizontal
+  static const EdgeInsets horizontalSmaller = EdgeInsets.only(left: smallerValue, right: smallerValue);
+  static const EdgeInsets horizontalSmall = EdgeInsets.only(left: smallValue, right: smallValue);
+  static const EdgeInsets horizontalMedium = EdgeInsets.only(left: mediumValue, right: mediumValue);
+  static const EdgeInsets horizontalLarge = EdgeInsets.only(left: largeValue, right: largeValue);
+  static const EdgeInsets horizontalLarger = EdgeInsets.only(left: largerValue, right: largerValue);
+
+  // vertical
+  static const EdgeInsets verticalSmaller = EdgeInsets.only(top: smallerValue, bottom: smallerValue);
+  static const EdgeInsets verticalSmall = EdgeInsets.only(top: smallValue, bottom: smallValue);
+  static const EdgeInsets verticalMedium = EdgeInsets.only(top: mediumValue, bottom: mediumValue);
+  static const EdgeInsets verticalLarge = EdgeInsets.only(top: largeValue, bottom: largeValue);
+  static const EdgeInsets verticalLarger = EdgeInsets.only(top: largerValue, bottom: largerValue);
 }
