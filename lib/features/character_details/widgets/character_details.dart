@@ -6,7 +6,7 @@ import 'package:game_of_flutter/extensions/widget_extension.dart';
 import 'package:game_of_flutter/features/character_details/widgets/house_info.dart';
 import 'package:game_of_flutter/features/house_details/widgets/body_info_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/character_info.dart';
-import 'package:game_of_flutter/features/house_details/widgets/flexible_house_details_space_bar.dart';
+import 'package:game_of_flutter/features/house_details/widgets/flexible_details_space_bar.dart';
 import 'package:game_of_flutter/features/house_details/widgets/headline_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/info_wrap.dart';
 import 'package:game_of_flutter/infrastructure/domain/character.dart';
@@ -27,7 +27,7 @@ class CharacterDetails extends StatelessWidget {
             expandedHeight: 200,
             stretch: true,
             pinned: true,
-            flexibleSpace: FlexibleHouseDetailsSpaceBar(
+            flexibleSpace: FlexibleDetailsSpaceBar(
               name: character.name,
               asset: Assets.charactersDetailsPlaceholder,
             ),
