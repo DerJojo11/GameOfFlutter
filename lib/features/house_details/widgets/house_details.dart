@@ -3,6 +3,7 @@ import 'package:game_of_flutter/configs/paddings.dart';
 import 'package:game_of_flutter/extensions/widget_extension.dart';
 import 'package:game_of_flutter/features/house_details/widgets/body_info_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/character_info.dart';
+import 'package:game_of_flutter/features/house_details/widgets/character_slider.dart';
 import 'package:game_of_flutter/features/house_details/widgets/flexible_house_details_space_bar.dart';
 import 'package:game_of_flutter/features/house_details/widgets/headline_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/info_wrap.dart';
@@ -31,23 +32,51 @@ class HouseDetails extends StatelessWidget {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               addAutomaticKeepAlives: true,
-              childCount: 1,
-              (context, index) => Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _buildHouseInfomations(context),
-                  _buildCharacterInfo(house.currentLord, headline: 'Current Lord'),
-                  _buildCharacterInfo(house.heir, headline: 'Heir'),
-                  _buildCharacterInfo(house.overlord, headline: 'Overlord'),
-                  _buildCharacterInfo(house.founder, headline: 'Founder'),
-                ],
-              ),
+              childCount: house.swornMembers.isNotEmpty ? 2 : 1,
+              (context, index) => index == 0 ? _buildInformations(context) : _buildSliderSection(),
             ),
           ).withSliverPadding(
-            Paddings.medium,
+            Paddings.bottomMedium,
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildInformations(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildHouseInfomations(context),
+        _buildCharacterInfo(house.currentLord, headline: 'Current Lord'),
+        _buildCharacterInfo(house.heir, headline: 'Heir'),
+        _buildCharacterInfo(house.overlord, headline: 'Overlord'),
+        _buildCharacterInfo(house.founder, headline: 'Founder'),
+      ],
+    ).withPadding(const EdgeInsets.only(
+      right: Paddings.mediumValue,
+      left: Paddings.mediumValue,
+      top: Paddings.mediumValue,
+    ));
+  }
+
+  Widget _buildSliderSection() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Divider(),
+        const HeadlineText(title: 'Sworn members').withPadding(
+          const EdgeInsets.only(
+            top: Paddings.smallValue,
+            bottom: Paddings.mediumValue,
+            left: Paddings.mediumValue,
+            right: Paddings.mediumValue,
+          ),
+        ),
+        CharacterSlider(characterIds: house.swornMembers),
+      ],
+    ).withPadding(
+      Paddings.topSmall,
     );
   }
 
@@ -61,10 +90,10 @@ class HouseDetails extends StatelessWidget {
         BodyInfoText(title: 'Region: ', content: house.region),
         BodyInfoText(title: 'Coat of arms: ', content: house.coatOfArms),
         BodyInfoText(title: 'Words: ', content: house.words),
-        _buildWrap(context, items: house.titles ?? [], prefix: 'Titles: '),
-        _buildWrap(context, items: house.seats ?? [], prefix: 'Seats: '),
+        _buildWrap(context, items: house.titles, prefix: 'Titles: '),
+        _buildWrap(context, items: house.seats, prefix: 'Seats: '),
         BodyInfoText(title: 'Founded: ', content: house.founded),
-        _buildWrap(context, items: house.ancestralWeapons ?? [], prefix: 'Ancestral Weapons: '),
+        _buildWrap(context, items: house.ancestralWeapons, prefix: 'Ancestral Weapons: '),
         BodyInfoText(title: 'Died out: ', content: house.diedOut),
       ],
     ).withPadding(
@@ -85,9 +114,21 @@ class HouseDetails extends StatelessWidget {
   // Overlord
   Widget _buildCharacterInfo(int? id, {required String headline}) {
     return id != null
-        ? CharacterInfo(
-            title: headline,
-            characterId: id,
+        ? Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Divider(),
+              HeadlineText(title: headline).withPadding(
+                const EdgeInsets.only(
+                  top: Paddings.smallValue,
+                  bottom: Paddings.smallValue,
+                ),
+              ),
+              CharacterInfo(
+                title: headline,
+                characterId: id,
+              ),
+            ],
           )
         : const SizedBox.shrink();
   }

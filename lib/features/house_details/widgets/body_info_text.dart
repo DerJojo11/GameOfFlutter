@@ -16,6 +16,8 @@ class BodyInfoText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
       text: TextSpan(
         style: DefaultTextStyle.of(context).style,
         children: [

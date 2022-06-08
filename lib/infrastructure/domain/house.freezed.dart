@@ -18,11 +18,11 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$House {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  List<String>? get titles => throw _privateConstructorUsedError;
-  List<String>? get seats => throw _privateConstructorUsedError;
-  List<String>? get ancestralWeapons => throw _privateConstructorUsedError;
+  List<String> get titles => throw _privateConstructorUsedError;
+  List<String> get seats => throw _privateConstructorUsedError;
+  List<String> get ancestralWeapons => throw _privateConstructorUsedError;
   List<int> get cadetBranches => throw _privateConstructorUsedError;
-  List<int>? get swornMembers => throw _privateConstructorUsedError;
+  List<int> get swornMembers => throw _privateConstructorUsedError;
   String get region => throw _privateConstructorUsedError;
   String get coatOfArms => throw _privateConstructorUsedError;
   String get words => throw _privateConstructorUsedError;
@@ -44,11 +44,11 @@ abstract class $HouseCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      List<String>? titles,
-      List<String>? seats,
-      List<String>? ancestralWeapons,
+      List<String> titles,
+      List<String> seats,
+      List<String> ancestralWeapons,
       List<int> cadetBranches,
-      List<int>? swornMembers,
+      List<int> swornMembers,
       String region,
       String coatOfArms,
       String words,
@@ -99,15 +99,15 @@ class _$HouseCopyWithImpl<$Res> implements $HouseCopyWith<$Res> {
       titles: titles == freezed
           ? _value.titles
           : titles // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<String>,
       seats: seats == freezed
           ? _value.seats
           : seats // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<String>,
       ancestralWeapons: ancestralWeapons == freezed
           ? _value.ancestralWeapons
           : ancestralWeapons // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<String>,
       cadetBranches: cadetBranches == freezed
           ? _value.cadetBranches
           : cadetBranches // ignore: cast_nullable_to_non_nullable
@@ -115,7 +115,7 @@ class _$HouseCopyWithImpl<$Res> implements $HouseCopyWith<$Res> {
       swornMembers: swornMembers == freezed
           ? _value.swornMembers
           : swornMembers // ignore: cast_nullable_to_non_nullable
-              as List<int>?,
+              as List<int>,
       region: region == freezed
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
@@ -164,11 +164,11 @@ abstract class _$$_HouseCopyWith<$Res> implements $HouseCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      List<String>? titles,
-      List<String>? seats,
-      List<String>? ancestralWeapons,
+      List<String> titles,
+      List<String> seats,
+      List<String> ancestralWeapons,
       List<int> cadetBranches,
-      List<int>? swornMembers,
+      List<int> swornMembers,
       String region,
       String coatOfArms,
       String words,
@@ -220,15 +220,15 @@ class __$$_HouseCopyWithImpl<$Res> extends _$HouseCopyWithImpl<$Res>
       titles: titles == freezed
           ? _value._titles
           : titles // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<String>,
       seats: seats == freezed
           ? _value._seats
           : seats // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<String>,
       ancestralWeapons: ancestralWeapons == freezed
           ? _value._ancestralWeapons
           : ancestralWeapons // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<String>,
       cadetBranches: cadetBranches == freezed
           ? _value._cadetBranches
           : cadetBranches // ignore: cast_nullable_to_non_nullable
@@ -236,7 +236,7 @@ class __$$_HouseCopyWithImpl<$Res> extends _$HouseCopyWithImpl<$Res>
       swornMembers: swornMembers == freezed
           ? _value._swornMembers
           : swornMembers // ignore: cast_nullable_to_non_nullable
-              as List<int>?,
+              as List<int>,
       region: region == freezed
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
@@ -283,11 +283,11 @@ class _$_House implements _House {
   _$_House(
       {required this.id,
       required this.name,
-      required final List<String>? titles,
-      required final List<String>? seats,
-      required final List<String>? ancestralWeapons,
+      required final List<String> titles,
+      required final List<String> seats,
+      required final List<String> ancestralWeapons,
       required final List<int> cadetBranches,
-      required final List<int>? swornMembers,
+      required final List<int> swornMembers,
       required this.region,
       required this.coatOfArms,
       required this.words,
@@ -307,31 +307,25 @@ class _$_House implements _House {
   final int id;
   @override
   final String name;
-  final List<String>? _titles;
+  final List<String> _titles;
   @override
-  List<String>? get titles {
-    final value = _titles;
-    if (value == null) return null;
+  List<String> get titles {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_titles);
   }
 
-  final List<String>? _seats;
+  final List<String> _seats;
   @override
-  List<String>? get seats {
-    final value = _seats;
-    if (value == null) return null;
+  List<String> get seats {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_seats);
   }
 
-  final List<String>? _ancestralWeapons;
+  final List<String> _ancestralWeapons;
   @override
-  List<String>? get ancestralWeapons {
-    final value = _ancestralWeapons;
-    if (value == null) return null;
+  List<String> get ancestralWeapons {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_ancestralWeapons);
   }
 
   final List<int> _cadetBranches;
@@ -341,13 +335,11 @@ class _$_House implements _House {
     return EqualUnmodifiableListView(_cadetBranches);
   }
 
-  final List<int>? _swornMembers;
+  final List<int> _swornMembers;
   @override
-  List<int>? get swornMembers {
-    final value = _swornMembers;
-    if (value == null) return null;
+  List<int> get swornMembers {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_swornMembers);
   }
 
   @override
@@ -432,11 +424,11 @@ abstract class _House implements House {
   factory _House(
       {required final int id,
       required final String name,
-      required final List<String>? titles,
-      required final List<String>? seats,
-      required final List<String>? ancestralWeapons,
+      required final List<String> titles,
+      required final List<String> seats,
+      required final List<String> ancestralWeapons,
       required final List<int> cadetBranches,
-      required final List<int>? swornMembers,
+      required final List<int> swornMembers,
       required final String region,
       required final String coatOfArms,
       required final String words,
@@ -452,15 +444,15 @@ abstract class _House implements House {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  List<String>? get titles => throw _privateConstructorUsedError;
+  List<String> get titles => throw _privateConstructorUsedError;
   @override
-  List<String>? get seats => throw _privateConstructorUsedError;
+  List<String> get seats => throw _privateConstructorUsedError;
   @override
-  List<String>? get ancestralWeapons => throw _privateConstructorUsedError;
+  List<String> get ancestralWeapons => throw _privateConstructorUsedError;
   @override
   List<int> get cadetBranches => throw _privateConstructorUsedError;
   @override
-  List<int>? get swornMembers => throw _privateConstructorUsedError;
+  List<int> get swornMembers => throw _privateConstructorUsedError;
   @override
   String get region => throw _privateConstructorUsedError;
   @override
