@@ -5,6 +5,7 @@ import 'package:game_of_flutter/core/widgets/details_info.dart';
 import 'package:game_of_flutter/features/house_details/blocs/character_bloc/character_bloc.dart';
 import 'package:game_of_flutter/features/house_details/widgets/body_info_text.dart';
 import 'package:game_of_flutter/injectable/injection.dart';
+import 'package:game_of_flutter/l10n/l10n.dart';
 import 'package:game_of_flutter/router/router_paths.dart';
 import 'package:go_router/go_router.dart';
 
@@ -32,9 +33,9 @@ class CharacterInfo extends StatelessWidget {
                   asset: Assets.charactersPlaceholder,
                   title: loaded.character.name,
                   children: [
-                    BodyInfoText(title: 'Culture: ', content: loaded.character.culture, maxLines: 1),
-                    BodyInfoText(title: 'Born: ', content: loaded.character.born, maxLines: 1),
-                    BodyInfoText(title: 'Died: ', content: loaded.character.died, maxLines: 1),
+                    BodyInfoText(title: l10n.cultureInfoTitle, content: loaded.character.culture, maxLines: 1),
+                    BodyInfoText(title: l10n.bornInfoTitle, content: loaded.character.born, maxLines: 1),
+                    BodyInfoText(title: l10n.diedInfoTitle, content: loaded.character.died, maxLines: 1),
                   ],
                 )),
             failure: (failure) => Center(

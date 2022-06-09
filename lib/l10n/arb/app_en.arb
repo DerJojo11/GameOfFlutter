@@ -1,0 +1,18 @@
+{
+    "appTitle": "Game of Flutter",
+    "notDefined": "Not Defined",
+    "swornMembers": "Sworn members",
+    "informations": "Informations",
+    "allegiances": "Allegiances",
+    "cultureInfoTitle": "Culture: ",
+    "bornInfoTitle": "Born: ",
+    "diedInfoTitle": "Died: ",
+    "regionInfoTitle": "Region: ",
+    "coatOfArmsInfoTitle": "Coat of Arms: ",
+    "wordsInfoTitle": "Words: ",
+    "foundedInfoTitle": "Founded: ",
+    "diedOutInfoTitle": "Died out: ",
+    "titlesWrapPrefix": "Titles: ",
+    "seatsWrapPrefix": "Seats: ",
+    "ancestralWeaponsWrapPrefix": "Ancestral Weapons: "
+}

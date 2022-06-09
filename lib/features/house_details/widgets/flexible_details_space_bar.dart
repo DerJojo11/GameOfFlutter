@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:game_of_flutter/configs/paddings.dart';
 
-class FlexibleHouseDetailsSpaceBar extends StatelessWidget {
-  const FlexibleHouseDetailsSpaceBar({
+class FlexibleDetailsSpaceBar extends StatelessWidget {
+  const FlexibleDetailsSpaceBar({
     required this.name,
     required this.asset,
   });
@@ -33,15 +33,19 @@ class FlexibleHouseDetailsSpaceBar extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      titlePadding: const EdgeInsets.only(
-        left: Paddings.largeValue,
-        right: Paddings.largeValue,
-        top: Paddings.largerValue,
-        bottom: Paddings.mediumValue,
+      centerTitle: true,
+      titlePadding: const EdgeInsetsDirectional.only(
+        start: Paddings.mediumValue,
+        end: Paddings.mediumValue,
+        bottom: Paddings.smallValue,
       ),
-      title: Text(
-        name,
-        textAlign: TextAlign.center,
+      title: SafeArea(
+        child: Text(
+          name,
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+        ),
       ),
     );
   }

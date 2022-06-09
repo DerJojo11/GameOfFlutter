@@ -5,6 +5,7 @@ import 'package:game_of_flutter/core/widgets/details_info.dart';
 import 'package:game_of_flutter/features/character_details/blocs/house/house_bloc.dart';
 import 'package:game_of_flutter/features/house_details/widgets/body_info_text.dart';
 import 'package:game_of_flutter/injectable/injection.dart';
+import 'package:game_of_flutter/l10n/l10n.dart';
 import 'package:game_of_flutter/router/router_paths.dart';
 import 'package:go_router/go_router.dart';
 
@@ -32,9 +33,9 @@ class HouseInfo extends StatelessWidget {
                   asset: Assets.coatOfArmsPlaceholder,
                   title: loaded.house.name,
                   children: [
-                    BodyInfoText(title: 'Region: ', content: loaded.house.region, maxLines: 1),
-                    BodyInfoText(title: 'Coat of Arms: ', content: loaded.house.coatOfArms, maxLines: 1),
-                    BodyInfoText(title: 'words: ', content: loaded.house.words, maxLines: 1),
+                    BodyInfoText(title: l10n.regionInfoTitle, content: loaded.house.region, maxLines: 1),
+                    BodyInfoText(title: l10n.coatOfArmsInfoTitle, content: loaded.house.coatOfArms, maxLines: 1),
+                    BodyInfoText(title: l10n.wordsInfoTitle, content: loaded.house.words, maxLines: 1),
                   ],
                 )),
             failure: (failure) => Center(
