@@ -9,6 +9,7 @@ import 'package:game_of_flutter/features/house_details/widgets/flexible_details_
 import 'package:game_of_flutter/features/house_details/widgets/headline_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/info_wrap.dart';
 import 'package:game_of_flutter/infrastructure/domain/house.dart';
+import 'package:game_of_flutter/l10n/l10n.dart';
 
 class HouseDetails extends StatelessWidget {
   const HouseDetails({
@@ -68,7 +69,7 @@ class HouseDetails extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Divider(),
-        const HeadlineText(title: 'Sworn members').withPadding(
+        HeadlineText(title: l10n.swornMembers).withPadding(
           const EdgeInsets.only(
             top: Paddings.smallValue,
             bottom: Paddings.mediumValue,
@@ -90,17 +91,17 @@ class HouseDetails extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const HeadlineText(title: 'Informations').withPadding(
+        HeadlineText(title: l10n.informations).withPadding(
           Paddings.bottomSmall,
         ),
-        BodyInfoText(title: 'Region: ', content: house.region),
-        BodyInfoText(title: 'Coat of arms: ', content: house.coatOfArms),
-        BodyInfoText(title: 'Words: ', content: house.words),
-        _buildWrap(context, items: house.titles, prefix: 'Titles: '),
-        _buildWrap(context, items: house.seats, prefix: 'Seats: '),
-        BodyInfoText(title: 'Founded: ', content: house.founded),
-        _buildWrap(context, items: house.ancestralWeapons, prefix: 'Ancestral Weapons: '),
-        BodyInfoText(title: 'Died out: ', content: house.diedOut),
+        BodyInfoText(title: l10n.regionInfoTitle, content: house.region),
+        BodyInfoText(title: l10n.coatOfArmsInfoTitle, content: house.coatOfArms),
+        BodyInfoText(title: l10n.wordsInfoTitle, content: house.words),
+        _buildWrap(context, items: house.titles, prefix: l10n.titlesWrapPrefix),
+        _buildWrap(context, items: house.seats, prefix: l10n.seatsWrapPrefix),
+        BodyInfoText(title: l10n.foundedInfoTitle, content: house.founded),
+        _buildWrap(context, items: house.ancestralWeapons, prefix: l10n.ancestralWeaponsWrapPrefix),
+        BodyInfoText(title: l10n.diedOutInfoTitle, content: house.diedOut),
       ],
     );
   }

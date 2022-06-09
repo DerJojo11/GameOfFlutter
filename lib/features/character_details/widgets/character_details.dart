@@ -10,6 +10,7 @@ import 'package:game_of_flutter/features/house_details/widgets/flexible_details_
 import 'package:game_of_flutter/features/house_details/widgets/headline_text.dart';
 import 'package:game_of_flutter/features/house_details/widgets/info_wrap.dart';
 import 'package:game_of_flutter/infrastructure/domain/character.dart';
+import 'package:game_of_flutter/l10n/l10n.dart';
 
 class CharacterDetails extends StatelessWidget {
   const CharacterDetails({
@@ -104,7 +105,7 @@ class CharacterDetails extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Divider(),
-        const HeadlineText(title: 'Allegiances').withPadding(
+        HeadlineText(title: l10n.allegiances).withPadding(
           const EdgeInsets.only(
             top: Paddings.smallValue,
             bottom: Paddings.mediumValue,
