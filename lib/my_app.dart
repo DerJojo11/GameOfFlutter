@@ -36,7 +36,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(l10n.appTitle),
       ),
-      body: const HouseList(), // This trailing comma makes auto-formatting nicer for build methods.
+      body: const HouseList(),
     );
   }
 }

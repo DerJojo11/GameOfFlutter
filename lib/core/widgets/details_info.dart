@@ -4,7 +4,11 @@ import 'package:game_of_flutter/extensions/widget_extension.dart';
 import 'package:game_of_flutter/features/house_details/widgets/headline_text.dart';
 
 class DetailsInfo extends StatelessWidget {
-  const DetailsInfo({required this.asset, required this.title, required this.children});
+  const DetailsInfo({
+    required this.asset,
+    required this.title,
+    required this.children,
+  });
 
   final String asset;
   final String title;
