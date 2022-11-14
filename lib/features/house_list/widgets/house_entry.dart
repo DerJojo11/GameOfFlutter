@@ -30,16 +30,19 @@ class HouseEntry extends StatelessWidget {
                   house.region,
                   style: Theme.of(context).textTheme.subtitle1,
                 ).withPadding(
-                  Paddings.leftSmall,
+                  edges: [Edges.leading],
+                  length: Length.small,
                 ),
               ],
             ),
           ),
         ],
-      ).withPadding(const EdgeInsets.symmetric(
-        vertical: Paddings.smallValue,
-        horizontal: Paddings.mediumValue,
-      )),
+      ).withPadding(
+        edges: [Edges.vertical],
+        length: Length.small,
+      ).withPadding(
+        edges: [Edges.horizontal],
+      ),
     );
   }
 }

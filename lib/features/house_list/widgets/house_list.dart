@@ -34,11 +34,10 @@ class HouseList extends StatelessWidget {
         itemCount: loaded.allItemsLoaded
             ? loaded.houses.length
             : loaded.houses.length + 1,
-        itemBuilder: (context, index) {
-          return _buildHouseEntry(index, loaded);
-        },
+        itemBuilder: (context, index) => _buildHouseEntry(index, loaded),
       ).withPadding(
-        Paddings.topSmall,
+        edges: [Edges.top],
+        length: Length.small,
       ),
     );
   }

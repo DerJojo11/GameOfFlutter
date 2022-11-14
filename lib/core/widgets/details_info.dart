@@ -22,7 +22,7 @@ class DetailsInfo extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           child: Image.asset(asset),
         ).withPadding(
-          Paddings.rightMedium,
+          edges: [Edges.trailing],
         ),
         Flexible(
           child: Column(

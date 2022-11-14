@@ -1,70 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:game_of_flutter/extensions/widget_extension.dart';
 
-abstract class Paddings {
-  Paddings._();
-  // padding values
-  static const double smallerValue = 4;
-  static const double smallValue = 8;
-  static const double mediumValue = 16;
-  static const double largeValue = 32;
-  static const double largerValue = 64;
+enum Edges {
+  top,
+  leading,
+  bottom,
+  trailing,
+  all,
+  horizontal,
+  vertical;
 
-  // all
-  static const EdgeInsets small = EdgeInsets.all(smallValue);
-  static const EdgeInsets smaller = EdgeInsets.all(smallerValue);
-  static const EdgeInsets medium = EdgeInsets.all(mediumValue);
-  static const EdgeInsets large = EdgeInsets.all(largeValue);
-  static const EdgeInsets larger = EdgeInsets.all(largerValue);
+  EdgeInsets getEdgeInsets(Length length) {
+    final double lengthValue = length.value;
+    switch (this) {
+      case Edges.top:
+        return EdgeInsets.only(top: lengthValue);
+      case Edges.leading:
+        return EdgeInsets.only(left: lengthValue);
+      case Edges.bottom:
+        return EdgeInsets.only(bottom: lengthValue);
+      case Edges.trailing:
+        return EdgeInsets.only(right: lengthValue);
+      case Edges.all:
+        return EdgeInsets.all(lengthValue);
+      case Edges.horizontal:
+        return EdgeInsets.symmetric(horizontal: lengthValue);
+      case Edges.vertical:
+        return EdgeInsets.symmetric(vertical: lengthValue);
+    }
+  }
+}
 
-  // left
-  static const EdgeInsets leftSmaller = EdgeInsets.only(left: smallerValue);
-  static const EdgeInsets leftSmall = EdgeInsets.only(left: smallValue);
-  static const EdgeInsets leftMedium = EdgeInsets.only(left: mediumValue);
-  static const EdgeInsets leftLarge = EdgeInsets.only(left: largeValue);
-  static const EdgeInsets leftLarger = EdgeInsets.only(left: largerValue);
+enum Length {
+  smaller(4),
+  small(8),
+  medium(16),
+  large(32),
+  larger(64);
 
-  // padding right
-  static const EdgeInsets rightSmaller = EdgeInsets.only(right: smallerValue);
-  static const EdgeInsets rightSmall = EdgeInsets.only(right: smallValue);
-  static const EdgeInsets rightMedium = EdgeInsets.only(right: mediumValue);
-  static const EdgeInsets rightLarge = EdgeInsets.only(right: largeValue);
-  static const EdgeInsets rightLarger = EdgeInsets.only(right: largerValue);
+  const Length(this.value);
+  final double value;
+}
 
-  // padding bottom
-  static const EdgeInsets bottomSmaller = EdgeInsets.only(bottom: smallerValue);
-  static const EdgeInsets bottomSmall = EdgeInsets.only(bottom: smallValue);
-  static const EdgeInsets bottomMedium = EdgeInsets.only(bottom: mediumValue);
-  static const EdgeInsets bottomLarge = EdgeInsets.only(bottom: largeValue);
-  static const EdgeInsets bottomLarger = EdgeInsets.only(bottom: largerValue);
+extension EdgesListExtension on List<Edges> {
+  EdgeInsets getEdgeInsets(Length length) {
+    EdgeInsets edgeInsets = EdgeInsets.zero;
 
-  // top padding
-  static const EdgeInsets topSmaller = EdgeInsets.only(top: smallerValue);
-  static const EdgeInsets topSmall = EdgeInsets.only(top: smallValue);
-  static const EdgeInsets topMedium = EdgeInsets.only(top: mediumValue);
-  static const EdgeInsets topLarge = EdgeInsets.only(top: largeValue);
-  static const EdgeInsets topLarger = EdgeInsets.only(top: largerValue);
-
-  // horizontal
-  static const EdgeInsets horizontalSmaller =
-      EdgeInsets.only(left: smallerValue, right: smallerValue);
-  static const EdgeInsets horizontalSmall =
-      EdgeInsets.only(left: smallValue, right: smallValue);
-  static const EdgeInsets horizontalMedium =
-      EdgeInsets.only(left: mediumValue, right: mediumValue);
-  static const EdgeInsets horizontalLarge =
-      EdgeInsets.only(left: largeValue, right: largeValue);
-  static const EdgeInsets horizontalLarger =
-      EdgeInsets.only(left: largerValue, right: largerValue);
-
-  // vertical
-  static const EdgeInsets verticalSmaller =
-      EdgeInsets.only(top: smallerValue, bottom: smallerValue);
-  static const EdgeInsets verticalSmall =
-      EdgeInsets.only(top: smallValue, bottom: smallValue);
-  static const EdgeInsets verticalMedium =
-      EdgeInsets.only(top: mediumValue, bottom: mediumValue);
-  static const EdgeInsets verticalLarge =
-      EdgeInsets.only(top: largeValue, bottom: largeValue);
-  static const EdgeInsets verticalLarger =
-      EdgeInsets.only(top: largerValue, bottom: largerValue);
+    for (var edge in this) {
+      final EdgeInsets insetForEdge = edge.getEdgeInsets(length);
+      edgeInsets = edgeInsets.merge(insetForEdge);
+    }
+    return edgeInsets;
+  }
 }

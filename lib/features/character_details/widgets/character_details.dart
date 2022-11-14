@@ -39,8 +39,9 @@ class CharacterDetails extends StatelessWidget {
               childCount: 1,
               (context, index) => _buildContent(context),
             ),
-          ).withSliverPadding(
-            Paddings.bottomMedium,
+          ).withPadding(
+            edges: [Edges.bottom],
+            isSliver: true,
           ),
         ],
       ),
@@ -55,22 +56,25 @@ class CharacterDetails extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const HeadlineText(title: 'Informations').withPadding(
-              Paddings.bottomSmall,
+              edges: [Edges.bottom],
+              length: Length.small,
             ),
             BodyInfoText(title: 'Culture: ', content: character.culture),
             BodyInfoText(title: 'Born: ', content: character.born),
             BodyInfoText(title: 'Died: ', content: character.died),
             _buildWrap(context, items: character.aliases, prefix: 'Aliases: '),
-            _buildWrap(context, items: character.playedBy, prefix: 'Played by: '),
+            _buildWrap(context,
+                items: character.playedBy, prefix: 'Played by: '),
             BodyInfoText(title: 'Gender: ', content: character.gender),
             _buildWrap(context, items: character.titles, prefix: 'Titles: '),
-            if (character.father != null) _buildCharacterInfo('Father', character.father!),
-            if (character.mother != null) _buildCharacterInfo('Mother', character.mother!),
-            if (character.spouse != null) _buildCharacterInfo('Spouse', character.spouse!),
+            if (character.father != null)
+              _buildCharacterInfo('Father', character.father!),
+            if (character.mother != null)
+              _buildCharacterInfo('Mother', character.mother!),
+            if (character.spouse != null)
+              _buildCharacterInfo('Spouse', character.spouse!),
           ],
-        ).withPadding(
-          Paddings.medium,
-        ),
+        ).withPadding(),
         if (character.allegiances.isNotEmpty) _buildSliderSection(),
       ],
     );
@@ -81,16 +85,17 @@ class CharacterDetails extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         HeadlineText(title: title).withPadding(
-          Paddings.bottomMedium,
+          edges: [Edges.bottom],
         ),
         CharacterInfo(characterId: characterId),
       ],
     ).withPadding(
-      Paddings.topMedium,
+      edges: [Edges.top],
     );
   }
 
-  Widget _buildWrap(BuildContext context, {required List<String> items, required String prefix}) {
+  Widget _buildWrap(BuildContext context,
+      {required List<String> items, required String prefix}) {
     return Visibility(
       visible: items.isNotEmpty,
       child: InfoWrap(
@@ -106,16 +111,15 @@ class CharacterDetails extends StatelessWidget {
       children: [
         const Divider(),
         HeadlineText(title: l10n.allegiances).withPadding(
-          const EdgeInsets.only(
-            top: Paddings.smallValue,
-            bottom: Paddings.mediumValue,
-            left: Paddings.mediumValue,
-            right: Paddings.mediumValue,
-          ),
+          edges: [Edges.horizontal, Edges.bottom],
+        ).withPadding(
+          edges: [Edges.top],
+          length: Length.small,
         ),
         InfoSlider(
           itemCount: character.allegiances.length,
-          itemBuilder: (_, index, __) => HouseInfo(id: character.allegiances[index]),
+          itemBuilder: (_, index, __) =>
+              HouseInfo(id: character.allegiances[index]),
         ),
       ],
     );

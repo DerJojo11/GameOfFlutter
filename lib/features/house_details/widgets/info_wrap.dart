@@ -22,14 +22,15 @@ class InfoWrap extends StatelessWidget {
         ),
         Wrap(
           alignment: WrapAlignment.start,
-          runSpacing: Paddings.smallValue,
-          spacing: Paddings.smallValue,
+          runSpacing: Length.small.value,
+          spacing: Length.small.value,
           children: [
             for (final String title in items)
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: ColoredBox(
-                  color: Theme.of(context).colorScheme.secondary.withOpacity(.6),
+                  color:
+                      Theme.of(context).colorScheme.secondary.withOpacity(.6),
                   child: Text(
                     title,
                     maxLines: 1,
@@ -38,17 +39,19 @@ class InfoWrap extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ).withPadding(
-                    Paddings.small,
+                    length: Length.small,
                   ),
                 ),
               ),
           ],
         ).withPadding(
-          Paddings.topSmaller,
+          edges: [Edges.top],
+          length: Length.small,
         ),
       ],
     ).withPadding(
-      Paddings.topSmall,
+      edges: [Edges.top],
+      length: Length.small,
     );
   }
 }

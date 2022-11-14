@@ -34,10 +34,10 @@ class FlexibleDetailsSpaceBar extends StatelessWidget {
         ),
       ),
       centerTitle: true,
-      titlePadding: const EdgeInsetsDirectional.only(
-        start: Paddings.mediumValue,
-        end: Paddings.mediumValue,
-        bottom: Paddings.smallValue,
+      titlePadding: EdgeInsetsDirectional.only(
+        start: Length.medium.value,
+        end: Length.medium.value,
+        bottom: Length.small.value,
       ),
       title: SafeArea(
         child: Text(
