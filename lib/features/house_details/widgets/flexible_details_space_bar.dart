@@ -12,6 +12,11 @@ class FlexibleDetailsSpaceBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlexibleSpaceBar(
+      stretchModes: const [
+        StretchMode.zoomBackground,
+        StretchMode.blurBackground,
+        StretchMode.fadeTitle,
+      ],
       expandedTitleScale: 1.4,
       collapseMode: CollapseMode.parallax,
       background: ShaderMask(
@@ -19,7 +24,6 @@ class FlexibleDetailsSpaceBar extends StatelessWidget {
           colors: [
             Colors.black87,
             Colors.transparent,
-            Colors.black54,
           ],
           begin: Alignment.bottomCenter,
           end: Alignment.topCenter,
