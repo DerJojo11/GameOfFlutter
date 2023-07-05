@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:game_of_flutter/configs/paddings.dart';
-import 'package:game_of_flutter/extensions/widget_extension.dart';
 import 'package:game_of_flutter/features/house_list/blocs/house_list/house_list_bloc.dart';
 import 'package:game_of_flutter/features/house_list/widgets/house_entry.dart';
 import 'package:game_of_flutter/features/house_list/widgets/list_loading_indicator.dart';
@@ -30,16 +28,12 @@ class HouseList extends StatelessWidget {
 
   Widget _buildList(HouseListLoaded loaded) {
     return Scrollbar(
-      child: ListView.builder(
-        itemCount: loaded.allItemsLoaded
-            ? loaded.houses.length
-            : loaded.houses.length + 1,
-        itemBuilder: (context, index) => _buildHouseEntry(index, loaded),
-      ).withPadding(
-        edges: [Edges.top],
-        length: Length.small,
-      ),
-    );
+        child: ListView.builder(
+      itemCount: loaded.allItemsLoaded
+          ? loaded.houses.length
+          : loaded.houses.length + 1,
+      itemBuilder: (context, index) => _buildHouseEntry(index, loaded),
+    ));
   }
 
   Widget _buildHouseEntry(int index, HouseListLoaded loaded) {

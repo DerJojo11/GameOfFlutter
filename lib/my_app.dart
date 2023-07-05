@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:game_of_flutter/configs/theme/app_theme.dart';
 import 'package:game_of_flutter/features/house_list/widgets/house_list.dart';
-import 'package:game_of_flutter/l10n/generated/app_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:game_of_flutter/l10n/l10n.dart';
 import 'package:game_of_flutter/router/app_router.dart';
 
@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
         l10n = context.l10n;
         return l10n.appTitle;
       },
-      routeInformationParser: _appRouter.router.routeInformationParser,
-      routerDelegate: _appRouter.router.routerDelegate,
+      routerConfig: _appRouter.router,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       theme: AppTheme().themeData,
