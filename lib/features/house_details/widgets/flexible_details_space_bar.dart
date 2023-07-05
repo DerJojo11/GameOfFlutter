@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:game_of_flutter/configs/paddings.dart';
 
 class FlexibleDetailsSpaceBar extends StatelessWidget {
   const FlexibleDetailsSpaceBar({
@@ -13,6 +12,11 @@ class FlexibleDetailsSpaceBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlexibleSpaceBar(
+      stretchModes: const [
+        StretchMode.zoomBackground,
+        StretchMode.blurBackground,
+        StretchMode.fadeTitle,
+      ],
       expandedTitleScale: 1.4,
       collapseMode: CollapseMode.parallax,
       background: ShaderMask(
@@ -20,7 +24,6 @@ class FlexibleDetailsSpaceBar extends StatelessWidget {
           colors: [
             Colors.black87,
             Colors.transparent,
-            Colors.black54,
           ],
           begin: Alignment.bottomCenter,
           end: Alignment.topCenter,
@@ -34,18 +37,15 @@ class FlexibleDetailsSpaceBar extends StatelessWidget {
         ),
       ),
       centerTitle: true,
-      titlePadding: EdgeInsetsDirectional.only(
-        start: Length.medium.value,
-        end: Length.medium.value,
-        bottom: Length.small.value,
-      ),
-      title: SafeArea(
-        child: Text(
-          name,
-          textAlign: TextAlign.center,
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-        ),
+      title: Text(
+        name,
+        textAlign: TextAlign.center,
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
+        style: Theme.of(context)
+            .textTheme
+            .titleLarge
+            ?.copyWith(color: Colors.white),
       ),
     );
   }

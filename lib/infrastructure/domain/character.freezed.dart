@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'character.dart';
 
@@ -41,7 +41,8 @@ mixin _$Character {
 /// @nodoc
 abstract class $CharacterCopyWith<$Res> {
   factory $CharacterCopyWith(Character value, $Res Function(Character) then) =
-      _$CharacterCopyWithImpl<$Res>;
+      _$CharacterCopyWithImpl<$Res, Character>;
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -62,98 +63,101 @@ abstract class $CharacterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
+class _$CharacterCopyWithImpl<$Res, $Val extends Character>
+    implements $CharacterCopyWith<$Res> {
   _$CharacterCopyWithImpl(this._value, this._then);
 
-  final Character _value;
   // ignore: unused_field
-  final $Res Function(Character) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? gender = freezed,
-    Object? culture = freezed,
-    Object? born = freezed,
-    Object? died = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? gender = null,
+    Object? culture = null,
+    Object? born = null,
+    Object? died = null,
     Object? father = freezed,
     Object? mother = freezed,
     Object? spouse = freezed,
-    Object? titles = freezed,
-    Object? aliases = freezed,
-    Object? allegiances = freezed,
-    Object? books = freezed,
-    Object? povBooks = freezed,
-    Object? tvSeries = freezed,
-    Object? playedBy = freezed,
+    Object? titles = null,
+    Object? aliases = null,
+    Object? allegiances = null,
+    Object? books = null,
+    Object? povBooks = null,
+    Object? tvSeries = null,
+    Object? playedBy = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      gender: gender == freezed
+      gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as String,
-      culture: culture == freezed
+      culture: null == culture
           ? _value.culture
           : culture // ignore: cast_nullable_to_non_nullable
               as String,
-      born: born == freezed
+      born: null == born
           ? _value.born
           : born // ignore: cast_nullable_to_non_nullable
               as String,
-      died: died == freezed
+      died: null == died
           ? _value.died
           : died // ignore: cast_nullable_to_non_nullable
               as String,
-      father: father == freezed
+      father: freezed == father
           ? _value.father
           : father // ignore: cast_nullable_to_non_nullable
               as int?,
-      mother: mother == freezed
+      mother: freezed == mother
           ? _value.mother
           : mother // ignore: cast_nullable_to_non_nullable
               as int?,
-      spouse: spouse == freezed
+      spouse: freezed == spouse
           ? _value.spouse
           : spouse // ignore: cast_nullable_to_non_nullable
               as int?,
-      titles: titles == freezed
+      titles: null == titles
           ? _value.titles
           : titles // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      aliases: aliases == freezed
+      aliases: null == aliases
           ? _value.aliases
           : aliases // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      allegiances: allegiances == freezed
+      allegiances: null == allegiances
           ? _value.allegiances
           : allegiances // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      books: books == freezed
+      books: null == books
           ? _value.books
           : books // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      povBooks: povBooks == freezed
+      povBooks: null == povBooks
           ? _value.povBooks
           : povBooks // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      tvSeries: tvSeries == freezed
+      tvSeries: null == tvSeries
           ? _value.tvSeries
           : tvSeries // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      playedBy: playedBy == freezed
+      playedBy: null == playedBy
           ? _value.playedBy
           : playedBy // ignore: cast_nullable_to_non_nullable
               as List<String>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -163,6 +167,7 @@ abstract class _$$_CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
           _$_Character value, $Res Function(_$_Character) then) =
       __$$_CharacterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -183,96 +188,95 @@ abstract class _$$_CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
+class __$$_CharacterCopyWithImpl<$Res>
+    extends _$CharacterCopyWithImpl<$Res, _$_Character>
     implements _$$_CharacterCopyWith<$Res> {
   __$$_CharacterCopyWithImpl(
       _$_Character _value, $Res Function(_$_Character) _then)
-      : super(_value, (v) => _then(v as _$_Character));
+      : super(_value, _then);
 
-  @override
-  _$_Character get _value => super._value as _$_Character;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? gender = freezed,
-    Object? culture = freezed,
-    Object? born = freezed,
-    Object? died = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? gender = null,
+    Object? culture = null,
+    Object? born = null,
+    Object? died = null,
     Object? father = freezed,
     Object? mother = freezed,
     Object? spouse = freezed,
-    Object? titles = freezed,
-    Object? aliases = freezed,
-    Object? allegiances = freezed,
-    Object? books = freezed,
-    Object? povBooks = freezed,
-    Object? tvSeries = freezed,
-    Object? playedBy = freezed,
+    Object? titles = null,
+    Object? aliases = null,
+    Object? allegiances = null,
+    Object? books = null,
+    Object? povBooks = null,
+    Object? tvSeries = null,
+    Object? playedBy = null,
   }) {
     return _then(_$_Character(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      gender: gender == freezed
+      gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as String,
-      culture: culture == freezed
+      culture: null == culture
           ? _value.culture
           : culture // ignore: cast_nullable_to_non_nullable
               as String,
-      born: born == freezed
+      born: null == born
           ? _value.born
           : born // ignore: cast_nullable_to_non_nullable
               as String,
-      died: died == freezed
+      died: null == died
           ? _value.died
           : died // ignore: cast_nullable_to_non_nullable
               as String,
-      father: father == freezed
+      father: freezed == father
           ? _value.father
           : father // ignore: cast_nullable_to_non_nullable
               as int?,
-      mother: mother == freezed
+      mother: freezed == mother
           ? _value.mother
           : mother // ignore: cast_nullable_to_non_nullable
               as int?,
-      spouse: spouse == freezed
+      spouse: freezed == spouse
           ? _value.spouse
           : spouse // ignore: cast_nullable_to_non_nullable
               as int?,
-      titles: titles == freezed
+      titles: null == titles
           ? _value._titles
           : titles // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      aliases: aliases == freezed
+      aliases: null == aliases
           ? _value._aliases
           : aliases // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      allegiances: allegiances == freezed
+      allegiances: null == allegiances
           ? _value._allegiances
           : allegiances // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      books: books == freezed
+      books: null == books
           ? _value._books
           : books // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      povBooks: povBooks == freezed
+      povBooks: null == povBooks
           ? _value._povBooks
           : povBooks // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      tvSeries: tvSeries == freezed
+      tvSeries: null == tvSeries
           ? _value._tvSeries
           : tvSeries // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      playedBy: playedBy == freezed
+      playedBy: null == playedBy
           ? _value._playedBy
           : playedBy // ignore: cast_nullable_to_non_nullable
               as List<String>,
@@ -329,6 +333,7 @@ class _$_Character implements _Character {
   final List<String> _titles;
   @override
   List<String> get titles {
+    if (_titles is EqualUnmodifiableListView) return _titles;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_titles);
   }
@@ -336,6 +341,7 @@ class _$_Character implements _Character {
   final List<String> _aliases;
   @override
   List<String> get aliases {
+    if (_aliases is EqualUnmodifiableListView) return _aliases;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_aliases);
   }
@@ -343,6 +349,7 @@ class _$_Character implements _Character {
   final List<int> _allegiances;
   @override
   List<int> get allegiances {
+    if (_allegiances is EqualUnmodifiableListView) return _allegiances;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_allegiances);
   }
@@ -350,6 +357,7 @@ class _$_Character implements _Character {
   final List<int> _books;
   @override
   List<int> get books {
+    if (_books is EqualUnmodifiableListView) return _books;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_books);
   }
@@ -357,6 +365,7 @@ class _$_Character implements _Character {
   final List<int> _povBooks;
   @override
   List<int> get povBooks {
+    if (_povBooks is EqualUnmodifiableListView) return _povBooks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_povBooks);
   }
@@ -364,6 +373,7 @@ class _$_Character implements _Character {
   final List<String> _tvSeries;
   @override
   List<String> get tvSeries {
+    if (_tvSeries is EqualUnmodifiableListView) return _tvSeries;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_tvSeries);
   }
@@ -371,6 +381,7 @@ class _$_Character implements _Character {
   final List<String> _playedBy;
   @override
   List<String> get playedBy {
+    if (_playedBy is EqualUnmodifiableListView) return _playedBy;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_playedBy);
   }
@@ -385,15 +396,15 @@ class _$_Character implements _Character {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Character &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.gender, gender) &&
-            const DeepCollectionEquality().equals(other.culture, culture) &&
-            const DeepCollectionEquality().equals(other.born, born) &&
-            const DeepCollectionEquality().equals(other.died, died) &&
-            const DeepCollectionEquality().equals(other.father, father) &&
-            const DeepCollectionEquality().equals(other.mother, mother) &&
-            const DeepCollectionEquality().equals(other.spouse, spouse) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.gender, gender) || other.gender == gender) &&
+            (identical(other.culture, culture) || other.culture == culture) &&
+            (identical(other.born, born) || other.born == born) &&
+            (identical(other.died, died) || other.died == died) &&
+            (identical(other.father, father) || other.father == father) &&
+            (identical(other.mother, mother) || other.mother == mother) &&
+            (identical(other.spouse, spouse) || other.spouse == spouse) &&
             const DeepCollectionEquality().equals(other._titles, _titles) &&
             const DeepCollectionEquality().equals(other._aliases, _aliases) &&
             const DeepCollectionEquality()
@@ -407,15 +418,15 @@ class _$_Character implements _Character {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(gender),
-      const DeepCollectionEquality().hash(culture),
-      const DeepCollectionEquality().hash(born),
-      const DeepCollectionEquality().hash(died),
-      const DeepCollectionEquality().hash(father),
-      const DeepCollectionEquality().hash(mother),
-      const DeepCollectionEquality().hash(spouse),
+      id,
+      name,
+      gender,
+      culture,
+      born,
+      died,
+      father,
+      mother,
+      spouse,
       const DeepCollectionEquality().hash(_titles),
       const DeepCollectionEquality().hash(_aliases),
       const DeepCollectionEquality().hash(_allegiances),
@@ -426,6 +437,7 @@ class _$_Character implements _Character {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CharacterCopyWith<_$_Character> get copyWith =>
       __$$_CharacterCopyWithImpl<_$_Character>(this, _$identity);
 }
@@ -450,37 +462,37 @@ abstract class _Character implements Character {
       required final List<String> playedBy}) = _$_Character;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get gender => throw _privateConstructorUsedError;
+  String get gender;
   @override
-  String get culture => throw _privateConstructorUsedError;
+  String get culture;
   @override
-  String get born => throw _privateConstructorUsedError;
+  String get born;
   @override
-  String get died => throw _privateConstructorUsedError;
+  String get died;
   @override
-  int? get father => throw _privateConstructorUsedError;
+  int? get father;
   @override
-  int? get mother => throw _privateConstructorUsedError;
+  int? get mother;
   @override
-  int? get spouse => throw _privateConstructorUsedError;
+  int? get spouse;
   @override
-  List<String> get titles => throw _privateConstructorUsedError;
+  List<String> get titles;
   @override
-  List<String> get aliases => throw _privateConstructorUsedError;
+  List<String> get aliases;
   @override
-  List<int> get allegiances => throw _privateConstructorUsedError;
+  List<int> get allegiances;
   @override
-  List<int> get books => throw _privateConstructorUsedError;
+  List<int> get books;
   @override
-  List<int> get povBooks => throw _privateConstructorUsedError;
+  List<int> get povBooks;
   @override
-  List<String> get tvSeries => throw _privateConstructorUsedError;
+  List<String> get tvSeries;
   @override
-  List<String> get playedBy => throw _privateConstructorUsedError;
+  List<String> get playedBy;
   @override
   @JsonKey(ignore: true)
   _$$_CharacterCopyWith<_$_Character> get copyWith =>

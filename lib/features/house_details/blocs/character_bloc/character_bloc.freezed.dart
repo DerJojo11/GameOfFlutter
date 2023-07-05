@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'character_bloc.dart';
 
@@ -24,7 +24,7 @@ mixin _$CharacterEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int id)? fetch,
+    TResult? Function(int id)? fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +40,7 @@ mixin _$CharacterEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CharacterFetch value)? fetch,
+    TResult? Function(CharacterFetch value)? fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,29 +59,32 @@ mixin _$CharacterEvent {
 abstract class $CharacterEventCopyWith<$Res> {
   factory $CharacterEventCopyWith(
           CharacterEvent value, $Res Function(CharacterEvent) then) =
-      _$CharacterEventCopyWithImpl<$Res>;
+      _$CharacterEventCopyWithImpl<$Res, CharacterEvent>;
+  @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class _$CharacterEventCopyWithImpl<$Res>
+class _$CharacterEventCopyWithImpl<$Res, $Val extends CharacterEvent>
     implements $CharacterEventCopyWith<$Res> {
   _$CharacterEventCopyWithImpl(this._value, this._then);
 
-  final CharacterEvent _value;
   // ignore: unused_field
-  final $Res Function(CharacterEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -92,26 +95,25 @@ abstract class _$$CharacterFetchCopyWith<$Res>
           _$CharacterFetch value, $Res Function(_$CharacterFetch) then) =
       __$$CharacterFetchCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int id});
 }
 
 /// @nodoc
 class __$$CharacterFetchCopyWithImpl<$Res>
-    extends _$CharacterEventCopyWithImpl<$Res>
+    extends _$CharacterEventCopyWithImpl<$Res, _$CharacterFetch>
     implements _$$CharacterFetchCopyWith<$Res> {
   __$$CharacterFetchCopyWithImpl(
       _$CharacterFetch _value, $Res Function(_$CharacterFetch) _then)
-      : super(_value, (v) => _then(v as _$CharacterFetch));
+      : super(_value, _then);
 
-  @override
-  _$CharacterFetch get _value => super._value as _$CharacterFetch;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
   }) {
     return _then(_$CharacterFetch(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
@@ -137,15 +139,15 @@ class _$CharacterFetch implements CharacterFetch {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CharacterFetch &&
-            const DeepCollectionEquality().equals(other.id, id));
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(id));
+  int get hashCode => Object.hash(runtimeType, id);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$CharacterFetchCopyWith<_$CharacterFetch> get copyWith =>
       __$$CharacterFetchCopyWithImpl<_$CharacterFetch>(this, _$identity);
 
@@ -160,7 +162,7 @@ class _$CharacterFetch implements CharacterFetch {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int id)? fetch,
+    TResult? Function(int id)? fetch,
   }) {
     return fetch?.call(id);
   }
@@ -188,7 +190,7 @@ class _$CharacterFetch implements CharacterFetch {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CharacterFetch value)? fetch,
+    TResult? Function(CharacterFetch value)? fetch,
   }) {
     return fetch?.call(this);
   }
@@ -210,7 +212,7 @@ abstract class CharacterFetch implements CharacterEvent {
   const factory CharacterFetch({required final int id}) = _$CharacterFetch;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
   @JsonKey(ignore: true)
   _$$CharacterFetchCopyWith<_$CharacterFetch> get copyWith =>
@@ -228,9 +230,9 @@ mixin _$CharacterState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Character character)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(Character character)? loaded,
+    TResult? Function(String error)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -250,9 +252,9 @@ mixin _$CharacterState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CharacterLoading value)? loading,
-    TResult Function(CharacterLoaded value)? loaded,
-    TResult Function(CharacterFailure value)? failure,
+    TResult? Function(CharacterLoading value)? loading,
+    TResult? Function(CharacterLoaded value)? loaded,
+    TResult? Function(CharacterFailure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -269,17 +271,18 @@ mixin _$CharacterState {
 abstract class $CharacterStateCopyWith<$Res> {
   factory $CharacterStateCopyWith(
           CharacterState value, $Res Function(CharacterState) then) =
-      _$CharacterStateCopyWithImpl<$Res>;
+      _$CharacterStateCopyWithImpl<$Res, CharacterState>;
 }
 
 /// @nodoc
-class _$CharacterStateCopyWithImpl<$Res>
+class _$CharacterStateCopyWithImpl<$Res, $Val extends CharacterState>
     implements $CharacterStateCopyWith<$Res> {
   _$CharacterStateCopyWithImpl(this._value, this._then);
 
-  final CharacterState _value;
   // ignore: unused_field
-  final $Res Function(CharacterState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -291,14 +294,11 @@ abstract class _$$CharacterLoadingCopyWith<$Res> {
 
 /// @nodoc
 class __$$CharacterLoadingCopyWithImpl<$Res>
-    extends _$CharacterStateCopyWithImpl<$Res>
+    extends _$CharacterStateCopyWithImpl<$Res, _$CharacterLoading>
     implements _$$CharacterLoadingCopyWith<$Res> {
   __$$CharacterLoadingCopyWithImpl(
       _$CharacterLoading _value, $Res Function(_$CharacterLoading) _then)
-      : super(_value, (v) => _then(v as _$CharacterLoading));
-
-  @override
-  _$CharacterLoading get _value => super._value as _$CharacterLoading;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -333,9 +333,9 @@ class _$CharacterLoading implements CharacterLoading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Character character)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(Character character)? loaded,
+    TResult? Function(String error)? failure,
   }) {
     return loading?.call();
   }
@@ -367,9 +367,9 @@ class _$CharacterLoading implements CharacterLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CharacterLoading value)? loading,
-    TResult Function(CharacterLoaded value)? loaded,
-    TResult Function(CharacterFailure value)? failure,
+    TResult? Function(CharacterLoading value)? loading,
+    TResult? Function(CharacterLoaded value)? loaded,
+    TResult? Function(CharacterFailure value)? failure,
   }) {
     return loading?.call(this);
   }
@@ -398,6 +398,7 @@ abstract class _$$CharacterLoadedCopyWith<$Res> {
   factory _$$CharacterLoadedCopyWith(
           _$CharacterLoaded value, $Res Function(_$CharacterLoaded) then) =
       __$$CharacterLoadedCopyWithImpl<$Res>;
+  @useResult
   $Res call({Character character});
 
   $CharacterCopyWith<$Res> get character;
@@ -405,21 +406,19 @@ abstract class _$$CharacterLoadedCopyWith<$Res> {
 
 /// @nodoc
 class __$$CharacterLoadedCopyWithImpl<$Res>
-    extends _$CharacterStateCopyWithImpl<$Res>
+    extends _$CharacterStateCopyWithImpl<$Res, _$CharacterLoaded>
     implements _$$CharacterLoadedCopyWith<$Res> {
   __$$CharacterLoadedCopyWithImpl(
       _$CharacterLoaded _value, $Res Function(_$CharacterLoaded) _then)
-      : super(_value, (v) => _then(v as _$CharacterLoaded));
+      : super(_value, _then);
 
-  @override
-  _$CharacterLoaded get _value => super._value as _$CharacterLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? character = freezed,
+    Object? character = null,
   }) {
     return _then(_$CharacterLoaded(
-      character: character == freezed
+      character: null == character
           ? _value.character
           : character // ignore: cast_nullable_to_non_nullable
               as Character,
@@ -427,6 +426,7 @@ class __$$CharacterLoadedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CharacterCopyWith<$Res> get character {
     return $CharacterCopyWith<$Res>(_value.character, (value) {
       return _then(_value.copyWith(character: value));
@@ -452,15 +452,16 @@ class _$CharacterLoaded implements CharacterLoaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CharacterLoaded &&
-            const DeepCollectionEquality().equals(other.character, character));
+            (identical(other.character, character) ||
+                other.character == character));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(character));
+  int get hashCode => Object.hash(runtimeType, character);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$CharacterLoadedCopyWith<_$CharacterLoaded> get copyWith =>
       __$$CharacterLoadedCopyWithImpl<_$CharacterLoaded>(this, _$identity);
 
@@ -477,9 +478,9 @@ class _$CharacterLoaded implements CharacterLoaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Character character)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(Character character)? loaded,
+    TResult? Function(String error)? failure,
   }) {
     return loaded?.call(character);
   }
@@ -511,9 +512,9 @@ class _$CharacterLoaded implements CharacterLoaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CharacterLoading value)? loading,
-    TResult Function(CharacterLoaded value)? loaded,
-    TResult Function(CharacterFailure value)? failure,
+    TResult? Function(CharacterLoading value)? loading,
+    TResult? Function(CharacterLoaded value)? loaded,
+    TResult? Function(CharacterFailure value)? failure,
   }) {
     return loaded?.call(this);
   }
@@ -537,7 +538,7 @@ abstract class CharacterLoaded implements CharacterState {
   const factory CharacterLoaded({required final Character character}) =
       _$CharacterLoaded;
 
-  Character get character => throw _privateConstructorUsedError;
+  Character get character;
   @JsonKey(ignore: true)
   _$$CharacterLoadedCopyWith<_$CharacterLoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -548,26 +549,25 @@ abstract class _$$CharacterFailureCopyWith<$Res> {
   factory _$$CharacterFailureCopyWith(
           _$CharacterFailure value, $Res Function(_$CharacterFailure) then) =
       __$$CharacterFailureCopyWithImpl<$Res>;
+  @useResult
   $Res call({String error});
 }
 
 /// @nodoc
 class __$$CharacterFailureCopyWithImpl<$Res>
-    extends _$CharacterStateCopyWithImpl<$Res>
+    extends _$CharacterStateCopyWithImpl<$Res, _$CharacterFailure>
     implements _$$CharacterFailureCopyWith<$Res> {
   __$$CharacterFailureCopyWithImpl(
       _$CharacterFailure _value, $Res Function(_$CharacterFailure) _then)
-      : super(_value, (v) => _then(v as _$CharacterFailure));
+      : super(_value, _then);
 
-  @override
-  _$CharacterFailure get _value => super._value as _$CharacterFailure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
     return _then(_$CharacterFailure(
-      error: error == freezed
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String,
@@ -593,15 +593,15 @@ class _$CharacterFailure implements CharacterFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CharacterFailure &&
-            const DeepCollectionEquality().equals(other.error, error));
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$CharacterFailureCopyWith<_$CharacterFailure> get copyWith =>
       __$$CharacterFailureCopyWithImpl<_$CharacterFailure>(this, _$identity);
 
@@ -618,9 +618,9 @@ class _$CharacterFailure implements CharacterFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Character character)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(Character character)? loaded,
+    TResult? Function(String error)? failure,
   }) {
     return failure?.call(error);
   }
@@ -652,9 +652,9 @@ class _$CharacterFailure implements CharacterFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CharacterLoading value)? loading,
-    TResult Function(CharacterLoaded value)? loaded,
-    TResult Function(CharacterFailure value)? failure,
+    TResult? Function(CharacterLoading value)? loading,
+    TResult? Function(CharacterLoaded value)? loaded,
+    TResult? Function(CharacterFailure value)? failure,
   }) {
     return failure?.call(this);
   }
@@ -678,7 +678,7 @@ abstract class CharacterFailure implements CharacterState {
   const factory CharacterFailure({required final String error}) =
       _$CharacterFailure;
 
-  String get error => throw _privateConstructorUsedError;
+  String get error;
   @JsonKey(ignore: true)
   _$$CharacterFailureCopyWith<_$CharacterFailure> get copyWith =>
       throw _privateConstructorUsedError;

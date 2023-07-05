@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'character_dto.dart';
 
@@ -47,7 +47,8 @@ mixin _$CharacterDto {
 abstract class $CharacterDtoCopyWith<$Res> {
   factory $CharacterDtoCopyWith(
           CharacterDto value, $Res Function(CharacterDto) then) =
-      _$CharacterDtoCopyWithImpl<$Res>;
+      _$CharacterDtoCopyWithImpl<$Res, CharacterDto>;
+  @useResult
   $Res call(
       {String? url,
       String? name,
@@ -68,13 +69,16 @@ abstract class $CharacterDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
+class _$CharacterDtoCopyWithImpl<$Res, $Val extends CharacterDto>
+    implements $CharacterDtoCopyWith<$Res> {
   _$CharacterDtoCopyWithImpl(this._value, this._then);
 
-  final CharacterDto _value;
   // ignore: unused_field
-  final $Res Function(CharacterDto) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? url = freezed,
@@ -95,71 +99,71 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
     Object? playedBy = freezed,
   }) {
     return _then(_value.copyWith(
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      gender: gender == freezed
+      gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as String?,
-      culture: culture == freezed
+      culture: freezed == culture
           ? _value.culture
           : culture // ignore: cast_nullable_to_non_nullable
               as String?,
-      born: born == freezed
+      born: freezed == born
           ? _value.born
           : born // ignore: cast_nullable_to_non_nullable
               as String?,
-      died: died == freezed
+      died: freezed == died
           ? _value.died
           : died // ignore: cast_nullable_to_non_nullable
               as String?,
-      father: father == freezed
+      father: freezed == father
           ? _value.father
           : father // ignore: cast_nullable_to_non_nullable
               as String?,
-      mother: mother == freezed
+      mother: freezed == mother
           ? _value.mother
           : mother // ignore: cast_nullable_to_non_nullable
               as String?,
-      spouse: spouse == freezed
+      spouse: freezed == spouse
           ? _value.spouse
           : spouse // ignore: cast_nullable_to_non_nullable
               as String?,
-      titles: titles == freezed
+      titles: freezed == titles
           ? _value.titles
           : titles // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      aliases: aliases == freezed
+      aliases: freezed == aliases
           ? _value.aliases
           : aliases // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      allegiances: allegiances == freezed
+      allegiances: freezed == allegiances
           ? _value.allegiances
           : allegiances // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      books: books == freezed
+      books: freezed == books
           ? _value.books
           : books // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      povBooks: povBooks == freezed
+      povBooks: freezed == povBooks
           ? _value.povBooks
           : povBooks // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      tvSeries: tvSeries == freezed
+      tvSeries: freezed == tvSeries
           ? _value.tvSeries
           : tvSeries // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      playedBy: playedBy == freezed
+      playedBy: freezed == playedBy
           ? _value.playedBy
           : playedBy // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -170,6 +174,7 @@ abstract class _$$_CharacterDtoCopyWith<$Res>
           _$_CharacterDto value, $Res Function(_$_CharacterDto) then) =
       __$$_CharacterDtoCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? url,
       String? name,
@@ -191,15 +196,13 @@ abstract class _$$_CharacterDtoCopyWith<$Res>
 
 /// @nodoc
 class __$$_CharacterDtoCopyWithImpl<$Res>
-    extends _$CharacterDtoCopyWithImpl<$Res>
+    extends _$CharacterDtoCopyWithImpl<$Res, _$_CharacterDto>
     implements _$$_CharacterDtoCopyWith<$Res> {
   __$$_CharacterDtoCopyWithImpl(
       _$_CharacterDto _value, $Res Function(_$_CharacterDto) _then)
-      : super(_value, (v) => _then(v as _$_CharacterDto));
+      : super(_value, _then);
 
-  @override
-  _$_CharacterDto get _value => super._value as _$_CharacterDto;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? url = freezed,
@@ -220,67 +223,67 @@ class __$$_CharacterDtoCopyWithImpl<$Res>
     Object? playedBy = freezed,
   }) {
     return _then(_$_CharacterDto(
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      gender: gender == freezed
+      gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as String?,
-      culture: culture == freezed
+      culture: freezed == culture
           ? _value.culture
           : culture // ignore: cast_nullable_to_non_nullable
               as String?,
-      born: born == freezed
+      born: freezed == born
           ? _value.born
           : born // ignore: cast_nullable_to_non_nullable
               as String?,
-      died: died == freezed
+      died: freezed == died
           ? _value.died
           : died // ignore: cast_nullable_to_non_nullable
               as String?,
-      father: father == freezed
+      father: freezed == father
           ? _value.father
           : father // ignore: cast_nullable_to_non_nullable
               as String?,
-      mother: mother == freezed
+      mother: freezed == mother
           ? _value.mother
           : mother // ignore: cast_nullable_to_non_nullable
               as String?,
-      spouse: spouse == freezed
+      spouse: freezed == spouse
           ? _value.spouse
           : spouse // ignore: cast_nullable_to_non_nullable
               as String?,
-      titles: titles == freezed
+      titles: freezed == titles
           ? _value._titles
           : titles // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      aliases: aliases == freezed
+      aliases: freezed == aliases
           ? _value._aliases
           : aliases // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      allegiances: allegiances == freezed
+      allegiances: freezed == allegiances
           ? _value._allegiances
           : allegiances // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      books: books == freezed
+      books: freezed == books
           ? _value._books
           : books // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      povBooks: povBooks == freezed
+      povBooks: freezed == povBooks
           ? _value._povBooks
           : povBooks // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      tvSeries: tvSeries == freezed
+      tvSeries: freezed == tvSeries
           ? _value._tvSeries
           : tvSeries // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      playedBy: playedBy == freezed
+      playedBy: freezed == playedBy
           ? _value._playedBy
           : playedBy // ignore: cast_nullable_to_non_nullable
               as List<String>?,
@@ -343,6 +346,7 @@ class _$_CharacterDto extends _CharacterDto {
   List<String>? get titles {
     final value = _titles;
     if (value == null) return null;
+    if (_titles is EqualUnmodifiableListView) return _titles;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -352,6 +356,7 @@ class _$_CharacterDto extends _CharacterDto {
   List<String>? get aliases {
     final value = _aliases;
     if (value == null) return null;
+    if (_aliases is EqualUnmodifiableListView) return _aliases;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -361,6 +366,7 @@ class _$_CharacterDto extends _CharacterDto {
   List<String>? get allegiances {
     final value = _allegiances;
     if (value == null) return null;
+    if (_allegiances is EqualUnmodifiableListView) return _allegiances;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -370,6 +376,7 @@ class _$_CharacterDto extends _CharacterDto {
   List<String>? get books {
     final value = _books;
     if (value == null) return null;
+    if (_books is EqualUnmodifiableListView) return _books;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -379,6 +386,7 @@ class _$_CharacterDto extends _CharacterDto {
   List<String>? get povBooks {
     final value = _povBooks;
     if (value == null) return null;
+    if (_povBooks is EqualUnmodifiableListView) return _povBooks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -388,6 +396,7 @@ class _$_CharacterDto extends _CharacterDto {
   List<String>? get tvSeries {
     final value = _tvSeries;
     if (value == null) return null;
+    if (_tvSeries is EqualUnmodifiableListView) return _tvSeries;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -397,6 +406,7 @@ class _$_CharacterDto extends _CharacterDto {
   List<String>? get playedBy {
     final value = _playedBy;
     if (value == null) return null;
+    if (_playedBy is EqualUnmodifiableListView) return _playedBy;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -411,15 +421,15 @@ class _$_CharacterDto extends _CharacterDto {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CharacterDto &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.gender, gender) &&
-            const DeepCollectionEquality().equals(other.culture, culture) &&
-            const DeepCollectionEquality().equals(other.born, born) &&
-            const DeepCollectionEquality().equals(other.died, died) &&
-            const DeepCollectionEquality().equals(other.father, father) &&
-            const DeepCollectionEquality().equals(other.mother, mother) &&
-            const DeepCollectionEquality().equals(other.spouse, spouse) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.gender, gender) || other.gender == gender) &&
+            (identical(other.culture, culture) || other.culture == culture) &&
+            (identical(other.born, born) || other.born == born) &&
+            (identical(other.died, died) || other.died == died) &&
+            (identical(other.father, father) || other.father == father) &&
+            (identical(other.mother, mother) || other.mother == mother) &&
+            (identical(other.spouse, spouse) || other.spouse == spouse) &&
             const DeepCollectionEquality().equals(other._titles, _titles) &&
             const DeepCollectionEquality().equals(other._aliases, _aliases) &&
             const DeepCollectionEquality()
@@ -434,15 +444,15 @@ class _$_CharacterDto extends _CharacterDto {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(gender),
-      const DeepCollectionEquality().hash(culture),
-      const DeepCollectionEquality().hash(born),
-      const DeepCollectionEquality().hash(died),
-      const DeepCollectionEquality().hash(father),
-      const DeepCollectionEquality().hash(mother),
-      const DeepCollectionEquality().hash(spouse),
+      url,
+      name,
+      gender,
+      culture,
+      born,
+      died,
+      father,
+      mother,
+      spouse,
       const DeepCollectionEquality().hash(_titles),
       const DeepCollectionEquality().hash(_aliases),
       const DeepCollectionEquality().hash(_allegiances),
@@ -453,12 +463,15 @@ class _$_CharacterDto extends _CharacterDto {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CharacterDtoCopyWith<_$_CharacterDto> get copyWith =>
       __$$_CharacterDtoCopyWithImpl<_$_CharacterDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CharacterDtoToJson(this);
+    return _$$_CharacterDtoToJson(
+      this,
+    );
   }
 }
 
@@ -486,37 +499,37 @@ abstract class _CharacterDto extends CharacterDto {
       _$_CharacterDto.fromJson;
 
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get gender => throw _privateConstructorUsedError;
+  String? get gender;
   @override
-  String? get culture => throw _privateConstructorUsedError;
+  String? get culture;
   @override
-  String? get born => throw _privateConstructorUsedError;
+  String? get born;
   @override
-  String? get died => throw _privateConstructorUsedError;
+  String? get died;
   @override
-  String? get father => throw _privateConstructorUsedError;
+  String? get father;
   @override
-  String? get mother => throw _privateConstructorUsedError;
+  String? get mother;
   @override
-  String? get spouse => throw _privateConstructorUsedError;
+  String? get spouse;
   @override
-  List<String>? get titles => throw _privateConstructorUsedError;
+  List<String>? get titles;
   @override
-  List<String>? get aliases => throw _privateConstructorUsedError;
+  List<String>? get aliases;
   @override
-  List<String>? get allegiances => throw _privateConstructorUsedError;
+  List<String>? get allegiances;
   @override
-  List<String>? get books => throw _privateConstructorUsedError;
+  List<String>? get books;
   @override
-  List<String>? get povBooks => throw _privateConstructorUsedError;
+  List<String>? get povBooks;
   @override
-  List<String>? get tvSeries => throw _privateConstructorUsedError;
+  List<String>? get tvSeries;
   @override
-  List<String>? get playedBy => throw _privateConstructorUsedError;
+  List<String>? get playedBy;
   @override
   @JsonKey(ignore: true)
   _$$_CharacterDtoCopyWith<_$_CharacterDto> get copyWith =>

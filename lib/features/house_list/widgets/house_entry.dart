@@ -19,7 +19,7 @@ class HouseEntry extends StatelessWidget {
         children: [
           Text(
             house.name,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           Visibility(
             visible: house.region.isNotEmpty,
@@ -28,7 +28,7 @@ class HouseEntry extends StatelessWidget {
                 const Icon(Icons.area_chart_rounded),
                 Text(
                   house.region,
-                  style: Theme.of(context).textTheme.subtitle1,
+                  style: Theme.of(context).textTheme.titleMedium,
                 ).withPadding(
                   edges: [Edges.leading],
                   length: Length.small,

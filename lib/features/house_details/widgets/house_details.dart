@@ -56,10 +56,10 @@ class HouseDetails extends StatelessWidget {
         const Divider().withPadding(
           edges: [Edges.top],
         ),
-        _buildCharacterInfo(house.currentLord, headline: 'Current Lord'),
-        _buildCharacterInfo(house.heir, headline: 'Heir'),
-        _buildCharacterInfo(house.overlord, headline: 'Overlord'),
-        _buildCharacterInfo(house.founder, headline: 'Founder'),
+        _buildCharacterInfo(house.currentLord, headline: l10n.currentLord),
+        _buildCharacterInfo(house.heir, headline: l10n.heir),
+        _buildCharacterInfo(house.overlord, headline: l10n.overlord),
+        _buildCharacterInfo(house.founder, headline: l10n.founder),
       ],
     ).withPadding(
       edges: [Edges.horizontal],
@@ -71,9 +71,7 @@ class HouseDetails extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Divider(),
-        HeadlineText(title: l10n.swornMembers).withPadding(
-          edges: [Edges.horizontal, Edges.bottom],
-        ),
+        HeadlineText(title: l10n.swornMembers).withPadding(),
         InfoSlider(
           itemCount: house.swornMembers.length,
           itemBuilder: (_, index, __) =>
@@ -120,7 +118,6 @@ class HouseDetails extends StatelessWidget {
     );
   }
 
-  // Overlord
   Widget _buildCharacterInfo(int? id, {required String headline}) {
     return id != null
         ? Column(

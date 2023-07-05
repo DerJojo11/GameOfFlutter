@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'house.dart';
 
@@ -40,7 +40,8 @@ mixin _$House {
 /// @nodoc
 abstract class $HouseCopyWith<$Res> {
   factory $HouseCopyWith(House value, $Res Function(House) then) =
-      _$HouseCopyWithImpl<$Res>;
+      _$HouseCopyWithImpl<$Res, House>;
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -61,98 +62,101 @@ abstract class $HouseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$HouseCopyWithImpl<$Res> implements $HouseCopyWith<$Res> {
+class _$HouseCopyWithImpl<$Res, $Val extends House>
+    implements $HouseCopyWith<$Res> {
   _$HouseCopyWithImpl(this._value, this._then);
 
-  final House _value;
   // ignore: unused_field
-  final $Res Function(House) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? titles = freezed,
-    Object? seats = freezed,
-    Object? ancestralWeapons = freezed,
-    Object? cadetBranches = freezed,
-    Object? swornMembers = freezed,
-    Object? region = freezed,
-    Object? coatOfArms = freezed,
-    Object? words = freezed,
-    Object? founded = freezed,
-    Object? diedOut = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? titles = null,
+    Object? seats = null,
+    Object? ancestralWeapons = null,
+    Object? cadetBranches = null,
+    Object? swornMembers = null,
+    Object? region = null,
+    Object? coatOfArms = null,
+    Object? words = null,
+    Object? founded = null,
+    Object? diedOut = null,
     Object? currentLord = freezed,
     Object? heir = freezed,
     Object? overlord = freezed,
     Object? founder = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      titles: titles == freezed
+      titles: null == titles
           ? _value.titles
           : titles // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      seats: seats == freezed
+      seats: null == seats
           ? _value.seats
           : seats // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      ancestralWeapons: ancestralWeapons == freezed
+      ancestralWeapons: null == ancestralWeapons
           ? _value.ancestralWeapons
           : ancestralWeapons // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      cadetBranches: cadetBranches == freezed
+      cadetBranches: null == cadetBranches
           ? _value.cadetBranches
           : cadetBranches // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      swornMembers: swornMembers == freezed
+      swornMembers: null == swornMembers
           ? _value.swornMembers
           : swornMembers // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      region: region == freezed
+      region: null == region
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
               as String,
-      coatOfArms: coatOfArms == freezed
+      coatOfArms: null == coatOfArms
           ? _value.coatOfArms
           : coatOfArms // ignore: cast_nullable_to_non_nullable
               as String,
-      words: words == freezed
+      words: null == words
           ? _value.words
           : words // ignore: cast_nullable_to_non_nullable
               as String,
-      founded: founded == freezed
+      founded: null == founded
           ? _value.founded
           : founded // ignore: cast_nullable_to_non_nullable
               as String,
-      diedOut: diedOut == freezed
+      diedOut: null == diedOut
           ? _value.diedOut
           : diedOut // ignore: cast_nullable_to_non_nullable
               as String,
-      currentLord: currentLord == freezed
+      currentLord: freezed == currentLord
           ? _value.currentLord
           : currentLord // ignore: cast_nullable_to_non_nullable
               as int?,
-      heir: heir == freezed
+      heir: freezed == heir
           ? _value.heir
           : heir // ignore: cast_nullable_to_non_nullable
               as int?,
-      overlord: overlord == freezed
+      overlord: freezed == overlord
           ? _value.overlord
           : overlord // ignore: cast_nullable_to_non_nullable
               as int?,
-      founder: founder == freezed
+      founder: freezed == founder
           ? _value.founder
           : founder // ignore: cast_nullable_to_non_nullable
               as int?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -161,6 +165,7 @@ abstract class _$$_HouseCopyWith<$Res> implements $HouseCopyWith<$Res> {
   factory _$$_HouseCopyWith(_$_House value, $Res Function(_$_House) then) =
       __$$_HouseCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -181,95 +186,93 @@ abstract class _$$_HouseCopyWith<$Res> implements $HouseCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_HouseCopyWithImpl<$Res> extends _$HouseCopyWithImpl<$Res>
+class __$$_HouseCopyWithImpl<$Res> extends _$HouseCopyWithImpl<$Res, _$_House>
     implements _$$_HouseCopyWith<$Res> {
   __$$_HouseCopyWithImpl(_$_House _value, $Res Function(_$_House) _then)
-      : super(_value, (v) => _then(v as _$_House));
+      : super(_value, _then);
 
-  @override
-  _$_House get _value => super._value as _$_House;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? titles = freezed,
-    Object? seats = freezed,
-    Object? ancestralWeapons = freezed,
-    Object? cadetBranches = freezed,
-    Object? swornMembers = freezed,
-    Object? region = freezed,
-    Object? coatOfArms = freezed,
-    Object? words = freezed,
-    Object? founded = freezed,
-    Object? diedOut = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? titles = null,
+    Object? seats = null,
+    Object? ancestralWeapons = null,
+    Object? cadetBranches = null,
+    Object? swornMembers = null,
+    Object? region = null,
+    Object? coatOfArms = null,
+    Object? words = null,
+    Object? founded = null,
+    Object? diedOut = null,
     Object? currentLord = freezed,
     Object? heir = freezed,
     Object? overlord = freezed,
     Object? founder = freezed,
   }) {
     return _then(_$_House(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      titles: titles == freezed
+      titles: null == titles
           ? _value._titles
           : titles // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      seats: seats == freezed
+      seats: null == seats
           ? _value._seats
           : seats // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      ancestralWeapons: ancestralWeapons == freezed
+      ancestralWeapons: null == ancestralWeapons
           ? _value._ancestralWeapons
           : ancestralWeapons // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      cadetBranches: cadetBranches == freezed
+      cadetBranches: null == cadetBranches
           ? _value._cadetBranches
           : cadetBranches // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      swornMembers: swornMembers == freezed
+      swornMembers: null == swornMembers
           ? _value._swornMembers
           : swornMembers // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      region: region == freezed
+      region: null == region
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
               as String,
-      coatOfArms: coatOfArms == freezed
+      coatOfArms: null == coatOfArms
           ? _value.coatOfArms
           : coatOfArms // ignore: cast_nullable_to_non_nullable
               as String,
-      words: words == freezed
+      words: null == words
           ? _value.words
           : words // ignore: cast_nullable_to_non_nullable
               as String,
-      founded: founded == freezed
+      founded: null == founded
           ? _value.founded
           : founded // ignore: cast_nullable_to_non_nullable
               as String,
-      diedOut: diedOut == freezed
+      diedOut: null == diedOut
           ? _value.diedOut
           : diedOut // ignore: cast_nullable_to_non_nullable
               as String,
-      currentLord: currentLord == freezed
+      currentLord: freezed == currentLord
           ? _value.currentLord
           : currentLord // ignore: cast_nullable_to_non_nullable
               as int?,
-      heir: heir == freezed
+      heir: freezed == heir
           ? _value.heir
           : heir // ignore: cast_nullable_to_non_nullable
               as int?,
-      overlord: overlord == freezed
+      overlord: freezed == overlord
           ? _value.overlord
           : overlord // ignore: cast_nullable_to_non_nullable
               as int?,
-      founder: founder == freezed
+      founder: freezed == founder
           ? _value.founder
           : founder // ignore: cast_nullable_to_non_nullable
               as int?,
@@ -310,6 +313,7 @@ class _$_House implements _House {
   final List<String> _titles;
   @override
   List<String> get titles {
+    if (_titles is EqualUnmodifiableListView) return _titles;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_titles);
   }
@@ -317,6 +321,7 @@ class _$_House implements _House {
   final List<String> _seats;
   @override
   List<String> get seats {
+    if (_seats is EqualUnmodifiableListView) return _seats;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_seats);
   }
@@ -324,6 +329,8 @@ class _$_House implements _House {
   final List<String> _ancestralWeapons;
   @override
   List<String> get ancestralWeapons {
+    if (_ancestralWeapons is EqualUnmodifiableListView)
+      return _ancestralWeapons;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_ancestralWeapons);
   }
@@ -331,6 +338,7 @@ class _$_House implements _House {
   final List<int> _cadetBranches;
   @override
   List<int> get cadetBranches {
+    if (_cadetBranches is EqualUnmodifiableListView) return _cadetBranches;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cadetBranches);
   }
@@ -338,6 +346,7 @@ class _$_House implements _House {
   final List<int> _swornMembers;
   @override
   List<int> get swornMembers {
+    if (_swornMembers is EqualUnmodifiableListView) return _swornMembers;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_swornMembers);
   }
@@ -371,8 +380,8 @@ class _$_House implements _House {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_House &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other._titles, _titles) &&
             const DeepCollectionEquality().equals(other._seats, _seats) &&
             const DeepCollectionEquality()
@@ -381,41 +390,43 @@ class _$_House implements _House {
                 .equals(other._cadetBranches, _cadetBranches) &&
             const DeepCollectionEquality()
                 .equals(other._swornMembers, _swornMembers) &&
-            const DeepCollectionEquality().equals(other.region, region) &&
-            const DeepCollectionEquality()
-                .equals(other.coatOfArms, coatOfArms) &&
-            const DeepCollectionEquality().equals(other.words, words) &&
-            const DeepCollectionEquality().equals(other.founded, founded) &&
-            const DeepCollectionEquality().equals(other.diedOut, diedOut) &&
-            const DeepCollectionEquality()
-                .equals(other.currentLord, currentLord) &&
-            const DeepCollectionEquality().equals(other.heir, heir) &&
-            const DeepCollectionEquality().equals(other.overlord, overlord) &&
-            const DeepCollectionEquality().equals(other.founder, founder));
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.coatOfArms, coatOfArms) ||
+                other.coatOfArms == coatOfArms) &&
+            (identical(other.words, words) || other.words == words) &&
+            (identical(other.founded, founded) || other.founded == founded) &&
+            (identical(other.diedOut, diedOut) || other.diedOut == diedOut) &&
+            (identical(other.currentLord, currentLord) ||
+                other.currentLord == currentLord) &&
+            (identical(other.heir, heir) || other.heir == heir) &&
+            (identical(other.overlord, overlord) ||
+                other.overlord == overlord) &&
+            (identical(other.founder, founder) || other.founder == founder));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
+      id,
+      name,
       const DeepCollectionEquality().hash(_titles),
       const DeepCollectionEquality().hash(_seats),
       const DeepCollectionEquality().hash(_ancestralWeapons),
       const DeepCollectionEquality().hash(_cadetBranches),
       const DeepCollectionEquality().hash(_swornMembers),
-      const DeepCollectionEquality().hash(region),
-      const DeepCollectionEquality().hash(coatOfArms),
-      const DeepCollectionEquality().hash(words),
-      const DeepCollectionEquality().hash(founded),
-      const DeepCollectionEquality().hash(diedOut),
-      const DeepCollectionEquality().hash(currentLord),
-      const DeepCollectionEquality().hash(heir),
-      const DeepCollectionEquality().hash(overlord),
-      const DeepCollectionEquality().hash(founder));
+      region,
+      coatOfArms,
+      words,
+      founded,
+      diedOut,
+      currentLord,
+      heir,
+      overlord,
+      founder);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_HouseCopyWith<_$_House> get copyWith =>
       __$$_HouseCopyWithImpl<_$_House>(this, _$identity);
 }
@@ -440,37 +451,37 @@ abstract class _House implements House {
       final int? founder}) = _$_House;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  List<String> get titles => throw _privateConstructorUsedError;
+  List<String> get titles;
   @override
-  List<String> get seats => throw _privateConstructorUsedError;
+  List<String> get seats;
   @override
-  List<String> get ancestralWeapons => throw _privateConstructorUsedError;
+  List<String> get ancestralWeapons;
   @override
-  List<int> get cadetBranches => throw _privateConstructorUsedError;
+  List<int> get cadetBranches;
   @override
-  List<int> get swornMembers => throw _privateConstructorUsedError;
+  List<int> get swornMembers;
   @override
-  String get region => throw _privateConstructorUsedError;
+  String get region;
   @override
-  String get coatOfArms => throw _privateConstructorUsedError;
+  String get coatOfArms;
   @override
-  String get words => throw _privateConstructorUsedError;
+  String get words;
   @override
-  String get founded => throw _privateConstructorUsedError;
+  String get founded;
   @override
-  String get diedOut => throw _privateConstructorUsedError;
+  String get diedOut;
   @override
-  int? get currentLord => throw _privateConstructorUsedError;
+  int? get currentLord;
   @override
-  int? get heir => throw _privateConstructorUsedError;
+  int? get heir;
   @override
-  int? get overlord => throw _privateConstructorUsedError;
+  int? get overlord;
   @override
-  int? get founder => throw _privateConstructorUsedError;
+  int? get founder;
   @override
   @JsonKey(ignore: true)
   _$$_HouseCopyWith<_$_House> get copyWith =>

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
-const Color _primary = Color(0xFF67331E);
-const Color _secondary = Color(0xFFC38D5F);
+const Color _primary = Color(0xFFC38D5F);
+const Color _secondary = Color(0xFF67331E);
 const Color _error = Colors.red;
 const Color _text = Color(0xFF331C0E);
 const Color _background = Color(0xFFFCFEF0);
@@ -14,6 +14,7 @@ class AppTheme {
         colorScheme: _colorScheme,
         textTheme: textTheme,
         fontFamily: 'GameOfThrones',
+        useMaterial3: true,
       );
 
   ColorScheme get _colorScheme => const ColorScheme(
@@ -31,42 +32,42 @@ class AppTheme {
       );
 
   TextTheme get textTheme => const TextTheme(
-        bodyText1: TextStyle(
+        bodyLarge: TextStyle(
           fontSize: 16,
           color: _text,
         ),
-        bodyText2: TextStyle(
+        bodyMedium: TextStyle(
           color: _text,
           fontSize: 14,
         ),
-        subtitle1: TextStyle(
+        titleMedium: TextStyle(
           color: _text,
           fontSize: 16,
         ),
-        subtitle2: TextStyle(
+        titleSmall: TextStyle(
           color: _text,
           fontSize: 14,
         ),
-        caption: TextStyle(
+        bodySmall: TextStyle(
           fontSize: 12,
           color: _text,
         ),
-        headline1: TextStyle(
+        displayLarge: TextStyle(
           color: _text,
           fontSize: 60,
           fontWeight: FontWeight.bold,
         ),
-        headline2: TextStyle(
+        displayMedium: TextStyle(
           color: _text,
           fontSize: 25,
           fontWeight: FontWeight.bold,
         ),
-        headline5: TextStyle(
+        headlineSmall: TextStyle(
           color: _text,
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
-        headline6: TextStyle(
+        titleLarge: TextStyle(
           color: _text,
           fontSize: 18,
           fontWeight: FontWeight.bold,

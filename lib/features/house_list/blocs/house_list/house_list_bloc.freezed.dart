@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'house_list_bloc.dart';
 
@@ -25,9 +25,9 @@ mixin _$HouseListEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? fetch,
-    TResult Function()? fetchNextPage,
-    TResult Function()? refresh,
+    TResult? Function()? fetch,
+    TResult? Function()? fetchNextPage,
+    TResult? Function()? refresh,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,9 +47,9 @@ mixin _$HouseListEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseListFetch value)? fetch,
-    TResult Function(HouseListFetchNextPage value)? fetchNextPage,
-    TResult Function(HouseListRefresh value)? refresh,
+    TResult? Function(HouseListFetch value)? fetch,
+    TResult? Function(HouseListFetchNextPage value)? fetchNextPage,
+    TResult? Function(HouseListRefresh value)? refresh,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,17 +66,18 @@ mixin _$HouseListEvent {
 abstract class $HouseListEventCopyWith<$Res> {
   factory $HouseListEventCopyWith(
           HouseListEvent value, $Res Function(HouseListEvent) then) =
-      _$HouseListEventCopyWithImpl<$Res>;
+      _$HouseListEventCopyWithImpl<$Res, HouseListEvent>;
 }
 
 /// @nodoc
-class _$HouseListEventCopyWithImpl<$Res>
+class _$HouseListEventCopyWithImpl<$Res, $Val extends HouseListEvent>
     implements $HouseListEventCopyWith<$Res> {
   _$HouseListEventCopyWithImpl(this._value, this._then);
 
-  final HouseListEvent _value;
   // ignore: unused_field
-  final $Res Function(HouseListEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -88,14 +89,11 @@ abstract class _$$HouseListFetchCopyWith<$Res> {
 
 /// @nodoc
 class __$$HouseListFetchCopyWithImpl<$Res>
-    extends _$HouseListEventCopyWithImpl<$Res>
+    extends _$HouseListEventCopyWithImpl<$Res, _$HouseListFetch>
     implements _$$HouseListFetchCopyWith<$Res> {
   __$$HouseListFetchCopyWithImpl(
       _$HouseListFetch _value, $Res Function(_$HouseListFetch) _then)
-      : super(_value, (v) => _then(v as _$HouseListFetch));
-
-  @override
-  _$HouseListFetch get _value => super._value as _$HouseListFetch;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -130,9 +128,9 @@ class _$HouseListFetch implements HouseListFetch {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? fetch,
-    TResult Function()? fetchNextPage,
-    TResult Function()? refresh,
+    TResult? Function()? fetch,
+    TResult? Function()? fetchNextPage,
+    TResult? Function()? refresh,
   }) {
     return fetch?.call();
   }
@@ -164,9 +162,9 @@ class _$HouseListFetch implements HouseListFetch {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseListFetch value)? fetch,
-    TResult Function(HouseListFetchNextPage value)? fetchNextPage,
-    TResult Function(HouseListRefresh value)? refresh,
+    TResult? Function(HouseListFetch value)? fetch,
+    TResult? Function(HouseListFetchNextPage value)? fetchNextPage,
+    TResult? Function(HouseListRefresh value)? refresh,
   }) {
     return fetch?.call(this);
   }
@@ -199,15 +197,11 @@ abstract class _$$HouseListFetchNextPageCopyWith<$Res> {
 
 /// @nodoc
 class __$$HouseListFetchNextPageCopyWithImpl<$Res>
-    extends _$HouseListEventCopyWithImpl<$Res>
+    extends _$HouseListEventCopyWithImpl<$Res, _$HouseListFetchNextPage>
     implements _$$HouseListFetchNextPageCopyWith<$Res> {
   __$$HouseListFetchNextPageCopyWithImpl(_$HouseListFetchNextPage _value,
       $Res Function(_$HouseListFetchNextPage) _then)
-      : super(_value, (v) => _then(v as _$HouseListFetchNextPage));
-
-  @override
-  _$HouseListFetchNextPage get _value =>
-      super._value as _$HouseListFetchNextPage;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -242,9 +236,9 @@ class _$HouseListFetchNextPage implements HouseListFetchNextPage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? fetch,
-    TResult Function()? fetchNextPage,
-    TResult Function()? refresh,
+    TResult? Function()? fetch,
+    TResult? Function()? fetchNextPage,
+    TResult? Function()? refresh,
   }) {
     return fetchNextPage?.call();
   }
@@ -276,9 +270,9 @@ class _$HouseListFetchNextPage implements HouseListFetchNextPage {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseListFetch value)? fetch,
-    TResult Function(HouseListFetchNextPage value)? fetchNextPage,
-    TResult Function(HouseListRefresh value)? refresh,
+    TResult? Function(HouseListFetch value)? fetch,
+    TResult? Function(HouseListFetchNextPage value)? fetchNextPage,
+    TResult? Function(HouseListRefresh value)? refresh,
   }) {
     return fetchNextPage?.call(this);
   }
@@ -311,14 +305,11 @@ abstract class _$$HouseListRefreshCopyWith<$Res> {
 
 /// @nodoc
 class __$$HouseListRefreshCopyWithImpl<$Res>
-    extends _$HouseListEventCopyWithImpl<$Res>
+    extends _$HouseListEventCopyWithImpl<$Res, _$HouseListRefresh>
     implements _$$HouseListRefreshCopyWith<$Res> {
   __$$HouseListRefreshCopyWithImpl(
       _$HouseListRefresh _value, $Res Function(_$HouseListRefresh) _then)
-      : super(_value, (v) => _then(v as _$HouseListRefresh));
-
-  @override
-  _$HouseListRefresh get _value => super._value as _$HouseListRefresh;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -353,9 +344,9 @@ class _$HouseListRefresh implements HouseListRefresh {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? fetch,
-    TResult Function()? fetchNextPage,
-    TResult Function()? refresh,
+    TResult? Function()? fetch,
+    TResult? Function()? fetchNextPage,
+    TResult? Function()? refresh,
   }) {
     return refresh?.call();
   }
@@ -387,9 +378,9 @@ class _$HouseListRefresh implements HouseListRefresh {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseListFetch value)? fetch,
-    TResult Function(HouseListFetchNextPage value)? fetchNextPage,
-    TResult Function(HouseListRefresh value)? refresh,
+    TResult? Function(HouseListFetch value)? fetch,
+    TResult? Function(HouseListFetchNextPage value)? fetchNextPage,
+    TResult? Function(HouseListRefresh value)? refresh,
   }) {
     return refresh?.call(this);
   }
@@ -424,9 +415,9 @@ mixin _$HouseListState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(List<House> houses, bool allItemsLoaded)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(List<House> houses, bool allItemsLoaded)? loaded,
+    TResult? Function(String error)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -446,9 +437,9 @@ mixin _$HouseListState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseListLoading value)? loading,
-    TResult Function(HouseListLoaded value)? loaded,
-    TResult Function(HouseListFailure value)? failure,
+    TResult? Function(HouseListLoading value)? loading,
+    TResult? Function(HouseListLoaded value)? loaded,
+    TResult? Function(HouseListFailure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -465,17 +456,18 @@ mixin _$HouseListState {
 abstract class $HouseListStateCopyWith<$Res> {
   factory $HouseListStateCopyWith(
           HouseListState value, $Res Function(HouseListState) then) =
-      _$HouseListStateCopyWithImpl<$Res>;
+      _$HouseListStateCopyWithImpl<$Res, HouseListState>;
 }
 
 /// @nodoc
-class _$HouseListStateCopyWithImpl<$Res>
+class _$HouseListStateCopyWithImpl<$Res, $Val extends HouseListState>
     implements $HouseListStateCopyWith<$Res> {
   _$HouseListStateCopyWithImpl(this._value, this._then);
 
-  final HouseListState _value;
   // ignore: unused_field
-  final $Res Function(HouseListState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -487,14 +479,11 @@ abstract class _$$HouseListLoadingCopyWith<$Res> {
 
 /// @nodoc
 class __$$HouseListLoadingCopyWithImpl<$Res>
-    extends _$HouseListStateCopyWithImpl<$Res>
+    extends _$HouseListStateCopyWithImpl<$Res, _$HouseListLoading>
     implements _$$HouseListLoadingCopyWith<$Res> {
   __$$HouseListLoadingCopyWithImpl(
       _$HouseListLoading _value, $Res Function(_$HouseListLoading) _then)
-      : super(_value, (v) => _then(v as _$HouseListLoading));
-
-  @override
-  _$HouseListLoading get _value => super._value as _$HouseListLoading;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -529,9 +518,9 @@ class _$HouseListLoading implements HouseListLoading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(List<House> houses, bool allItemsLoaded)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(List<House> houses, bool allItemsLoaded)? loaded,
+    TResult? Function(String error)? failure,
   }) {
     return loading?.call();
   }
@@ -563,9 +552,9 @@ class _$HouseListLoading implements HouseListLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseListLoading value)? loading,
-    TResult Function(HouseListLoaded value)? loaded,
-    TResult Function(HouseListFailure value)? failure,
+    TResult? Function(HouseListLoading value)? loading,
+    TResult? Function(HouseListLoaded value)? loaded,
+    TResult? Function(HouseListFailure value)? failure,
   }) {
     return loading?.call(this);
   }
@@ -594,31 +583,30 @@ abstract class _$$HouseListLoadedCopyWith<$Res> {
   factory _$$HouseListLoadedCopyWith(
           _$HouseListLoaded value, $Res Function(_$HouseListLoaded) then) =
       __$$HouseListLoadedCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<House> houses, bool allItemsLoaded});
 }
 
 /// @nodoc
 class __$$HouseListLoadedCopyWithImpl<$Res>
-    extends _$HouseListStateCopyWithImpl<$Res>
+    extends _$HouseListStateCopyWithImpl<$Res, _$HouseListLoaded>
     implements _$$HouseListLoadedCopyWith<$Res> {
   __$$HouseListLoadedCopyWithImpl(
       _$HouseListLoaded _value, $Res Function(_$HouseListLoaded) _then)
-      : super(_value, (v) => _then(v as _$HouseListLoaded));
+      : super(_value, _then);
 
-  @override
-  _$HouseListLoaded get _value => super._value as _$HouseListLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? houses = freezed,
-    Object? allItemsLoaded = freezed,
+    Object? houses = null,
+    Object? allItemsLoaded = null,
   }) {
     return _then(_$HouseListLoaded(
-      houses: houses == freezed
+      houses: null == houses
           ? _value._houses
           : houses // ignore: cast_nullable_to_non_nullable
               as List<House>,
-      allItemsLoaded: allItemsLoaded == freezed
+      allItemsLoaded: null == allItemsLoaded
           ? _value.allItemsLoaded
           : allItemsLoaded // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -636,6 +624,7 @@ class _$HouseListLoaded implements HouseListLoaded {
   final List<House> _houses;
   @override
   List<House> get houses {
+    if (_houses is EqualUnmodifiableListView) return _houses;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_houses);
   }
@@ -655,18 +644,17 @@ class _$HouseListLoaded implements HouseListLoaded {
         (other.runtimeType == runtimeType &&
             other is _$HouseListLoaded &&
             const DeepCollectionEquality().equals(other._houses, _houses) &&
-            const DeepCollectionEquality()
-                .equals(other.allItemsLoaded, allItemsLoaded));
+            (identical(other.allItemsLoaded, allItemsLoaded) ||
+                other.allItemsLoaded == allItemsLoaded));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_houses),
-      const DeepCollectionEquality().hash(allItemsLoaded));
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_houses), allItemsLoaded);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$HouseListLoadedCopyWith<_$HouseListLoaded> get copyWith =>
       __$$HouseListLoadedCopyWithImpl<_$HouseListLoaded>(this, _$identity);
 
@@ -683,9 +671,9 @@ class _$HouseListLoaded implements HouseListLoaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(List<House> houses, bool allItemsLoaded)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(List<House> houses, bool allItemsLoaded)? loaded,
+    TResult? Function(String error)? failure,
   }) {
     return loaded?.call(houses, allItemsLoaded);
   }
@@ -717,9 +705,9 @@ class _$HouseListLoaded implements HouseListLoaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseListLoading value)? loading,
-    TResult Function(HouseListLoaded value)? loaded,
-    TResult Function(HouseListFailure value)? failure,
+    TResult? Function(HouseListLoading value)? loading,
+    TResult? Function(HouseListLoaded value)? loaded,
+    TResult? Function(HouseListFailure value)? failure,
   }) {
     return loaded?.call(this);
   }
@@ -744,8 +732,8 @@ abstract class HouseListLoaded implements HouseListState {
       {required final List<House> houses,
       final bool allItemsLoaded}) = _$HouseListLoaded;
 
-  List<House> get houses => throw _privateConstructorUsedError;
-  bool get allItemsLoaded => throw _privateConstructorUsedError;
+  List<House> get houses;
+  bool get allItemsLoaded;
   @JsonKey(ignore: true)
   _$$HouseListLoadedCopyWith<_$HouseListLoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -756,26 +744,25 @@ abstract class _$$HouseListFailureCopyWith<$Res> {
   factory _$$HouseListFailureCopyWith(
           _$HouseListFailure value, $Res Function(_$HouseListFailure) then) =
       __$$HouseListFailureCopyWithImpl<$Res>;
+  @useResult
   $Res call({String error});
 }
 
 /// @nodoc
 class __$$HouseListFailureCopyWithImpl<$Res>
-    extends _$HouseListStateCopyWithImpl<$Res>
+    extends _$HouseListStateCopyWithImpl<$Res, _$HouseListFailure>
     implements _$$HouseListFailureCopyWith<$Res> {
   __$$HouseListFailureCopyWithImpl(
       _$HouseListFailure _value, $Res Function(_$HouseListFailure) _then)
-      : super(_value, (v) => _then(v as _$HouseListFailure));
+      : super(_value, _then);
 
-  @override
-  _$HouseListFailure get _value => super._value as _$HouseListFailure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
     return _then(_$HouseListFailure(
-      error: error == freezed
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String,
@@ -801,15 +788,15 @@ class _$HouseListFailure implements HouseListFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HouseListFailure &&
-            const DeepCollectionEquality().equals(other.error, error));
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$HouseListFailureCopyWith<_$HouseListFailure> get copyWith =>
       __$$HouseListFailureCopyWithImpl<_$HouseListFailure>(this, _$identity);
 
@@ -826,9 +813,9 @@ class _$HouseListFailure implements HouseListFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(List<House> houses, bool allItemsLoaded)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(List<House> houses, bool allItemsLoaded)? loaded,
+    TResult? Function(String error)? failure,
   }) {
     return failure?.call(error);
   }
@@ -860,9 +847,9 @@ class _$HouseListFailure implements HouseListFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseListLoading value)? loading,
-    TResult Function(HouseListLoaded value)? loaded,
-    TResult Function(HouseListFailure value)? failure,
+    TResult? Function(HouseListLoading value)? loading,
+    TResult? Function(HouseListLoaded value)? loaded,
+    TResult? Function(HouseListFailure value)? failure,
   }) {
     return failure?.call(this);
   }
@@ -886,7 +873,7 @@ abstract class HouseListFailure implements HouseListState {
   const factory HouseListFailure({required final String error}) =
       _$HouseListFailure;
 
-  String get error => throw _privateConstructorUsedError;
+  String get error;
   @JsonKey(ignore: true)
   _$$HouseListFailureCopyWith<_$HouseListFailure> get copyWith =>
       throw _privateConstructorUsedError;

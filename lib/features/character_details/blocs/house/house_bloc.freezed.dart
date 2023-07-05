@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'house_bloc.dart';
 
@@ -24,7 +24,7 @@ mixin _$HouseEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int id)? fetch,
+    TResult? Function(int id)? fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +40,7 @@ mixin _$HouseEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseFetch value)? fetch,
+    TResult? Function(HouseFetch value)? fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,28 +59,32 @@ mixin _$HouseEvent {
 abstract class $HouseEventCopyWith<$Res> {
   factory $HouseEventCopyWith(
           HouseEvent value, $Res Function(HouseEvent) then) =
-      _$HouseEventCopyWithImpl<$Res>;
+      _$HouseEventCopyWithImpl<$Res, HouseEvent>;
+  @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class _$HouseEventCopyWithImpl<$Res> implements $HouseEventCopyWith<$Res> {
+class _$HouseEventCopyWithImpl<$Res, $Val extends HouseEvent>
+    implements $HouseEventCopyWith<$Res> {
   _$HouseEventCopyWithImpl(this._value, this._then);
 
-  final HouseEvent _value;
   // ignore: unused_field
-  final $Res Function(HouseEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -91,25 +95,25 @@ abstract class _$$HouseFetchCopyWith<$Res>
           _$HouseFetch value, $Res Function(_$HouseFetch) then) =
       __$$HouseFetchCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class __$$HouseFetchCopyWithImpl<$Res> extends _$HouseEventCopyWithImpl<$Res>
+class __$$HouseFetchCopyWithImpl<$Res>
+    extends _$HouseEventCopyWithImpl<$Res, _$HouseFetch>
     implements _$$HouseFetchCopyWith<$Res> {
   __$$HouseFetchCopyWithImpl(
       _$HouseFetch _value, $Res Function(_$HouseFetch) _then)
-      : super(_value, (v) => _then(v as _$HouseFetch));
+      : super(_value, _then);
 
-  @override
-  _$HouseFetch get _value => super._value as _$HouseFetch;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
   }) {
     return _then(_$HouseFetch(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
@@ -135,15 +139,15 @@ class _$HouseFetch implements HouseFetch {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HouseFetch &&
-            const DeepCollectionEquality().equals(other.id, id));
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(id));
+  int get hashCode => Object.hash(runtimeType, id);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$HouseFetchCopyWith<_$HouseFetch> get copyWith =>
       __$$HouseFetchCopyWithImpl<_$HouseFetch>(this, _$identity);
 
@@ -158,7 +162,7 @@ class _$HouseFetch implements HouseFetch {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int id)? fetch,
+    TResult? Function(int id)? fetch,
   }) {
     return fetch?.call(id);
   }
@@ -186,7 +190,7 @@ class _$HouseFetch implements HouseFetch {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseFetch value)? fetch,
+    TResult? Function(HouseFetch value)? fetch,
   }) {
     return fetch?.call(this);
   }
@@ -208,7 +212,7 @@ abstract class HouseFetch implements HouseEvent {
   const factory HouseFetch({required final int id}) = _$HouseFetch;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
   @JsonKey(ignore: true)
   _$$HouseFetchCopyWith<_$HouseFetch> get copyWith =>
@@ -226,9 +230,9 @@ mixin _$HouseState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(House house)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(House house)? loaded,
+    TResult? Function(String error)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -248,9 +252,9 @@ mixin _$HouseState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseLoading value)? loading,
-    TResult Function(HouseLoaded value)? loaded,
-    TResult Function(HouseFailure value)? failure,
+    TResult? Function(HouseLoading value)? loading,
+    TResult? Function(HouseLoaded value)? loaded,
+    TResult? Function(HouseFailure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -267,16 +271,18 @@ mixin _$HouseState {
 abstract class $HouseStateCopyWith<$Res> {
   factory $HouseStateCopyWith(
           HouseState value, $Res Function(HouseState) then) =
-      _$HouseStateCopyWithImpl<$Res>;
+      _$HouseStateCopyWithImpl<$Res, HouseState>;
 }
 
 /// @nodoc
-class _$HouseStateCopyWithImpl<$Res> implements $HouseStateCopyWith<$Res> {
+class _$HouseStateCopyWithImpl<$Res, $Val extends HouseState>
+    implements $HouseStateCopyWith<$Res> {
   _$HouseStateCopyWithImpl(this._value, this._then);
 
-  final HouseState _value;
   // ignore: unused_field
-  final $Res Function(HouseState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -287,14 +293,12 @@ abstract class _$$HouseLoadingCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$HouseLoadingCopyWithImpl<$Res> extends _$HouseStateCopyWithImpl<$Res>
+class __$$HouseLoadingCopyWithImpl<$Res>
+    extends _$HouseStateCopyWithImpl<$Res, _$HouseLoading>
     implements _$$HouseLoadingCopyWith<$Res> {
   __$$HouseLoadingCopyWithImpl(
       _$HouseLoading _value, $Res Function(_$HouseLoading) _then)
-      : super(_value, (v) => _then(v as _$HouseLoading));
-
-  @override
-  _$HouseLoading get _value => super._value as _$HouseLoading;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -329,9 +333,9 @@ class _$HouseLoading implements HouseLoading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(House house)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(House house)? loaded,
+    TResult? Function(String error)? failure,
   }) {
     return loading?.call();
   }
@@ -363,9 +367,9 @@ class _$HouseLoading implements HouseLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseLoading value)? loading,
-    TResult Function(HouseLoaded value)? loaded,
-    TResult Function(HouseFailure value)? failure,
+    TResult? Function(HouseLoading value)? loading,
+    TResult? Function(HouseLoaded value)? loaded,
+    TResult? Function(HouseFailure value)? failure,
   }) {
     return loading?.call(this);
   }
@@ -394,27 +398,27 @@ abstract class _$$HouseLoadedCopyWith<$Res> {
   factory _$$HouseLoadedCopyWith(
           _$HouseLoaded value, $Res Function(_$HouseLoaded) then) =
       __$$HouseLoadedCopyWithImpl<$Res>;
+  @useResult
   $Res call({House house});
 
   $HouseCopyWith<$Res> get house;
 }
 
 /// @nodoc
-class __$$HouseLoadedCopyWithImpl<$Res> extends _$HouseStateCopyWithImpl<$Res>
+class __$$HouseLoadedCopyWithImpl<$Res>
+    extends _$HouseStateCopyWithImpl<$Res, _$HouseLoaded>
     implements _$$HouseLoadedCopyWith<$Res> {
   __$$HouseLoadedCopyWithImpl(
       _$HouseLoaded _value, $Res Function(_$HouseLoaded) _then)
-      : super(_value, (v) => _then(v as _$HouseLoaded));
+      : super(_value, _then);
 
-  @override
-  _$HouseLoaded get _value => super._value as _$HouseLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? house = freezed,
+    Object? house = null,
   }) {
     return _then(_$HouseLoaded(
-      house: house == freezed
+      house: null == house
           ? _value.house
           : house // ignore: cast_nullable_to_non_nullable
               as House,
@@ -422,6 +426,7 @@ class __$$HouseLoadedCopyWithImpl<$Res> extends _$HouseStateCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HouseCopyWith<$Res> get house {
     return $HouseCopyWith<$Res>(_value.house, (value) {
       return _then(_value.copyWith(house: value));
@@ -447,15 +452,15 @@ class _$HouseLoaded implements HouseLoaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HouseLoaded &&
-            const DeepCollectionEquality().equals(other.house, house));
+            (identical(other.house, house) || other.house == house));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(house));
+  int get hashCode => Object.hash(runtimeType, house);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$HouseLoadedCopyWith<_$HouseLoaded> get copyWith =>
       __$$HouseLoadedCopyWithImpl<_$HouseLoaded>(this, _$identity);
 
@@ -472,9 +477,9 @@ class _$HouseLoaded implements HouseLoaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(House house)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(House house)? loaded,
+    TResult? Function(String error)? failure,
   }) {
     return loaded?.call(house);
   }
@@ -506,9 +511,9 @@ class _$HouseLoaded implements HouseLoaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseLoading value)? loading,
-    TResult Function(HouseLoaded value)? loaded,
-    TResult Function(HouseFailure value)? failure,
+    TResult? Function(HouseLoading value)? loading,
+    TResult? Function(HouseLoaded value)? loaded,
+    TResult? Function(HouseFailure value)? failure,
   }) {
     return loaded?.call(this);
   }
@@ -531,7 +536,7 @@ class _$HouseLoaded implements HouseLoaded {
 abstract class HouseLoaded implements HouseState {
   const factory HouseLoaded({required final House house}) = _$HouseLoaded;
 
-  House get house => throw _privateConstructorUsedError;
+  House get house;
   @JsonKey(ignore: true)
   _$$HouseLoadedCopyWith<_$HouseLoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -542,25 +547,25 @@ abstract class _$$HouseFailureCopyWith<$Res> {
   factory _$$HouseFailureCopyWith(
           _$HouseFailure value, $Res Function(_$HouseFailure) then) =
       __$$HouseFailureCopyWithImpl<$Res>;
+  @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$HouseFailureCopyWithImpl<$Res> extends _$HouseStateCopyWithImpl<$Res>
+class __$$HouseFailureCopyWithImpl<$Res>
+    extends _$HouseStateCopyWithImpl<$Res, _$HouseFailure>
     implements _$$HouseFailureCopyWith<$Res> {
   __$$HouseFailureCopyWithImpl(
       _$HouseFailure _value, $Res Function(_$HouseFailure) _then)
-      : super(_value, (v) => _then(v as _$HouseFailure));
+      : super(_value, _then);
 
-  @override
-  _$HouseFailure get _value => super._value as _$HouseFailure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
     return _then(_$HouseFailure(
-      error: error == freezed
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String,
@@ -586,15 +591,15 @@ class _$HouseFailure implements HouseFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HouseFailure &&
-            const DeepCollectionEquality().equals(other.error, error));
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$HouseFailureCopyWith<_$HouseFailure> get copyWith =>
       __$$HouseFailureCopyWithImpl<_$HouseFailure>(this, _$identity);
 
@@ -611,9 +616,9 @@ class _$HouseFailure implements HouseFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(House house)? loaded,
-    TResult Function(String error)? failure,
+    TResult? Function()? loading,
+    TResult? Function(House house)? loaded,
+    TResult? Function(String error)? failure,
   }) {
     return failure?.call(error);
   }
@@ -645,9 +650,9 @@ class _$HouseFailure implements HouseFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HouseLoading value)? loading,
-    TResult Function(HouseLoaded value)? loaded,
-    TResult Function(HouseFailure value)? failure,
+    TResult? Function(HouseLoading value)? loading,
+    TResult? Function(HouseLoaded value)? loaded,
+    TResult? Function(HouseFailure value)? failure,
   }) {
     return failure?.call(this);
   }
@@ -670,7 +675,7 @@ class _$HouseFailure implements HouseFailure {
 abstract class HouseFailure implements HouseState {
   const factory HouseFailure({required final String error}) = _$HouseFailure;
 
-  String get error => throw _privateConstructorUsedError;
+  String get error;
   @JsonKey(ignore: true)
   _$$HouseFailureCopyWith<_$HouseFailure> get copyWith =>
       throw _privateConstructorUsedError;
